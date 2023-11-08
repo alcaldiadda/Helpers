@@ -1,8 +1,9 @@
 {
   "name": "helpers",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Funciones para validar y realizar diferentes acciones en la intranet municipal",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "src",
   "repository": "https://github.com/alcaldiadda/Helpers",
   "author": "GEPD",
   "license": "MIT",
