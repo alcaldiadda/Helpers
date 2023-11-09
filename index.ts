@@ -24,4 +24,5 @@ export * from "./src/isValidPid";
 export * from "./src/setCookie";
 export * from "./src/splitDateRange";
 export * from "./src/subtractTimeObject";
+export * from "./src/summarizeHoursMinutes";
 export * from "./src/time";
