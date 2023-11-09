@@ -40,4 +40,5 @@ __exportStar(require("./src/isValidPid"), exports);
 __exportStar(require("./src/setCookie"), exports);
 __exportStar(require("./src/splitDateRange"), exports);
 __exportStar(require("./src/subtractTimeObject"), exports);
+__exportStar(require("./src/summarizeHoursMinutes"), exports);
 __exportStar(require("./src/time"), exports);
