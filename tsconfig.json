@@ -11,7 +11,8 @@
     "paths": {
       "helper/*": ["./src/*"]
     },
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "declaration": true
   },
   "include": ["index.ts", "./src"],
   "exclude": ["node_modules"]
