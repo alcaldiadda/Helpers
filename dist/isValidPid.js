@@ -23,4 +23,3 @@ var isValidPid = function (value) {
     return null;
 };
 exports.isValidPid = isValidPid;
-//# sourceMappingURL=isValidPid.js.map

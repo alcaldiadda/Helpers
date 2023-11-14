@@ -18,4 +18,3 @@ var isStructurallyEqual = function (obj1, obj2) {
     return keys1.every(function (key) { return (0, exports.isStructurallyEqual)(obj1[key], obj2[key]); });
 };
 exports.isStructurallyEqual = isStructurallyEqual;
-//# sourceMappingURL=isStructurallyEqual.js.map

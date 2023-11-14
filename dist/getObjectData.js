@@ -12,4 +12,3 @@ var getObjectData = function (key, value, array) {
     return (array === null || array === void 0 ? void 0 : array.find(function (item) { return item[key] === value; })) || value;
 };
 exports.getObjectData = getObjectData;
-//# sourceMappingURL=getObjectData.js.map

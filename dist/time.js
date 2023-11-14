@@ -45,4 +45,3 @@ var formatRelativeDateFromISO = function (iso) {
 exports.formatRelativeDateFromISO = formatRelativeDateFromISO;
 var isDateValid = function (iso) { return luxon_1.DateTime.fromISO(iso).isValid; };
 exports.isDateValid = isDateValid;
-//# sourceMappingURL=time.js.map

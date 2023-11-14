@@ -82,4 +82,3 @@ var calculateOvertime = function (_a, overtimeSessions) {
     return overtimeOutput;
 };
 exports.calculateOvertime = calculateOvertime;
-//# sourceMappingURL=calculateOvertime.js.map

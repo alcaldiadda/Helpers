@@ -1,1 +1,0 @@
-{"version":3,"file":"getObjectData.js","sourceRoot":"","sources":["../src/getObjectData.ts"],"names":[],"mappings":";;;AAAA;;;;;;GAMG;AACI,IAAM,aAAa,GAAG,UAAC,GAAW,EAAE,KAAa,EAAE,KAAa;IACrE,OAAO,CAAA,KAAK,aAAL,KAAK,uBAAL,KAAK,CAAE,IAAI,CAAC,UAAC,IAAI,IAAK,OAAA,IAAI,CAAC,GAAG,CAAC,KAAK,KAAK,EAAnB,CAAmB,CAAC,KAAI,KAAK,CAAC;AAC7D,CAAC,CAAC;AAFW,QAAA,aAAa,iBAExB"}

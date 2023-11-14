@@ -5,4 +5,3 @@ var emailValidation = function (emailAddress) {
     return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailAddress);
 };
 exports.emailValidation = emailValidation;
-//# sourceMappingURL=emailValidation.js.map

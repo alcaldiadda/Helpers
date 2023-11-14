@@ -26,4 +26,3 @@ var getSchedules = function (date, type, schedules) {
     return result;
 };
 exports.getSchedules = getSchedules;
-//# sourceMappingURL=getSchedules.js.map

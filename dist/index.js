@@ -42,4 +42,3 @@ __exportStar(require("./subtractTimeObject"), exports);
 __exportStar(require("./summarizeHoursMinutes"), exports);
 __exportStar(require("./time"), exports);
 __exportStar(require("./types"), exports);
-//# sourceMappingURL=index.js.map

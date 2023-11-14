@@ -27,4 +27,3 @@ var checkTimeRange = function (data, session, timezone) {
     return startDateLocal >= startSessionDate && endDateLocal <= endSessionDate;
 };
 exports.checkTimeRange = checkTimeRange;
-//# sourceMappingURL=checkTimeRange.js.map

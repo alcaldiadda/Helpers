@@ -5,4 +5,3 @@ var isValidPhone = function (text) {
     return !/_/.test(text);
 };
 exports.isValidPhone = isValidPhone;
-//# sourceMappingURL=isValidPhone.js.map

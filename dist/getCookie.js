@@ -9,4 +9,3 @@ var getCookie = function (name) {
         return (_a = parts.pop()) === null || _a === void 0 ? void 0 : _a.split(";").shift();
 };
 exports.getCookie = getCookie;
-//# sourceMappingURL=getCookie.js.map

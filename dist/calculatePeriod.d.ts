@@ -6,4 +6,3 @@ interface CalculatePeriodProps {
 }
 export declare const calculatePeriod: ({ start, end, basePeriodMinutes, }: CalculatePeriodProps) => HoursAndExtended;
 export {};
-//# sourceMappingURL=calculatePeriod.d.ts.map

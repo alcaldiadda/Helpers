@@ -13,4 +13,3 @@ var setCookie = function (domain, name, value, hours, isSecure) {
     }
 };
 exports.setCookie = setCookie;
-//# sourceMappingURL=setCookie.js.map

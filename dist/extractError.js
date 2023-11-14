@@ -11,4 +11,3 @@ var extractError = function (strError) {
     }
 };
 exports.extractError = extractError;
-//# sourceMappingURL=extractError.js.map

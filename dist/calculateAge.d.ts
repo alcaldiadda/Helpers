@@ -3,4 +3,3 @@ export declare const calculateAge: (birthday: Date | string, referenceDate: Date
     months: number;
     days: number;
 };
-//# sourceMappingURL=calculateAge.d.ts.map

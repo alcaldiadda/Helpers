@@ -6,4 +6,3 @@
  * @returns string or object in array
  */
 export declare const getObjectData: (key: string, value: string, array?: any[]) => any;
-//# sourceMappingURL=getObjectData.d.ts.map

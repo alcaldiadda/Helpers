@@ -9,4 +9,3 @@ export declare const subtractTimeObjects: (time1: TimeObjectProps, time2: TimeTo
         minutes: number;
     };
 };
-//# sourceMappingURL=subtractTimeObject.d.ts.map
