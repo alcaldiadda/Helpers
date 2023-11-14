@@ -1,4 +1,4 @@
-import { SchedulesProps } from "./Types";
+import { SchedulesProps } from "./types";
 import { DateTime, Interval } from "luxon";
 
 interface OvertimeResult {

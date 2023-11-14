@@ -1,4 +1,4 @@
-import { Period } from "./Types";
+import { Period } from "./types";
 import { DateTime, Interval, Settings } from "luxon";
 
 Settings.defaultZone = "utc"; // set the default timezone for all DateTime objects to UTC

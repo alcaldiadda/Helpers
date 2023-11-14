@@ -1,4 +1,4 @@
-import { HoursAndExtended } from "./Types";
+import { HoursAndExtended } from "./types";
 
 interface CalculatePeriodProps {
   start: string;

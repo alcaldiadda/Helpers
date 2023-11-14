@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { SchedulesProps } from "./Types";
+import { SchedulesProps } from "./types";
 
 /* 
   Given a date, determine what are the schedules in a array of schedules

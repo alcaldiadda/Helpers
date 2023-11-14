@@ -1,5 +1,5 @@
 import { DateTime } from "luxon";
-import { TimeObjectProps, TimeToSubtract } from "./Types";
+import { TimeObjectProps, TimeToSubtract } from "./types";
 
 export const subtractTimeObjects = (
   time1: TimeObjectProps,
