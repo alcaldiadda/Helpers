@@ -15,10 +15,8 @@
       "helper/*": ["./src/*"]
     },
     "outDir": "./dist",
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true
+    "declaration": true
   },
-  "include": ["src/**/*", "types.d.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }
