@@ -1,4 +1,4 @@
-import { Models } from "./Models";
+import { Models } from "./models";
 
 /**
  * DATABASE TYPES
