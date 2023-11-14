@@ -16,3 +16,4 @@ var summarizeHoursMinutes = function (docs) {
     return { hours: hours, minutes: minutes };
 };
 exports.summarizeHoursMinutes = summarizeHoursMinutes;
+//# sourceMappingURL=summarizeHoursMinutes.js.map

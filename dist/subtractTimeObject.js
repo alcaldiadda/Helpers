@@ -32,3 +32,4 @@ var subtractTimeObjects = function (time1, time2) {
     };
 };
 exports.subtractTimeObjects = subtractTimeObjects;
+//# sourceMappingURL=subtractTimeObject.js.map

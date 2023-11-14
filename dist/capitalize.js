@@ -12,3 +12,4 @@ var capitalize = function (text) {
         .join(" ");
 };
 exports.capitalize = capitalize;
+//# sourceMappingURL=capitalize.js.map

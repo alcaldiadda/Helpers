@@ -1,0 +1,1 @@
+{"version":3,"file":"checkTimeRange.d.ts","sourceRoot":"","sources":["../src/checkTimeRange.ts"],"names":[],"mappings":"AAEA,UAAU,QAAQ;IAChB,KAAK,EAAE,MAAM,CAAC;IACd,GAAG,EAAE,MAAM,CAAC;CACb;AAED,UAAU,WAAW;IACnB,KAAK,EAAE,MAAM,CAAC;IACd,GAAG,EAAE,MAAM,CAAC;CACb;AAGD,eAAO,MAAM,cAAc,SAAU,QAAQ,WAAW,WAAW,YAAY,MAAM,KAAG,OAiCvF,CAAC"}

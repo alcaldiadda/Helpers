@@ -1,0 +1,1 @@
+{"version":3,"file":"splitDateRange.d.ts","sourceRoot":"","sources":["../src/splitDateRange.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,SAAS,CAAC;AAKjC,UAAU,mBAAmB;IAC3B,KAAK,EAAE,MAAM,CAAC;IACd,GAAG,EAAE,MAAM,CAAC;IACZ,QAAQ,EAAE,MAAM,CAAC;CAClB;AAED,eAAO,MAAM,cAAc,8BAIxB,mBAAmB,KAAG,MAAM,EA4C9B,CAAC"}

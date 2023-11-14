@@ -1,0 +1,1 @@
+{"version":3,"file":"calculatePeriod.d.ts","sourceRoot":"","sources":["../src/calculatePeriod.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,gBAAgB,EAAE,MAAM,SAAS,CAAC;AAE3C,UAAU,oBAAoB;IAC5B,KAAK,EAAE,MAAM,CAAC;IACd,GAAG,EAAE,MAAM,CAAC;IACZ,iBAAiB,EAAE,MAAM,CAAC;CAC3B;AAED,eAAO,MAAM,eAAe,uCAIzB,oBAAoB,KAAG,gBA6BzB,CAAC"}

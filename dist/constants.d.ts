@@ -5,3 +5,4 @@ export declare const WORKING_END_TIME = "17:30";
 export declare const LUNCH_START_TIME = "13:00";
 export declare const LUNCH_END_TIME = "15:00";
 export declare const LUNCH_TIME = 30;
+//# sourceMappingURL=constants.d.ts.map

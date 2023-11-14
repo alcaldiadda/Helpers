@@ -8,3 +8,4 @@ interface SessionData {
 }
 export declare const checkTimeRange: (data: DateData, session: SessionData, timezone: string) => boolean;
 export {};
+//# sourceMappingURL=checkTimeRange.d.ts.map

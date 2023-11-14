@@ -6,3 +6,4 @@ export interface HolidayResponseProps {
     tipo: string;
 }
 export declare const getHolidays: (year: string) => Promise<HolidayResponseProps[]>;
+//# sourceMappingURL=getHolidays.d.ts.map

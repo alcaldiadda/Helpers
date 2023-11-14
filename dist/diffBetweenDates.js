@@ -12,3 +12,4 @@ var diffBetweenDates = function (date1, date2, unit) {
     return diff;
 };
 exports.diffBetweenDates = diffBetweenDates;
+//# sourceMappingURL=diffBetweenDates.js.map

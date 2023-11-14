@@ -7,3 +7,4 @@ export declare const formatDateTimeFromJS: (date: Date, format?: string) => stri
 export declare const formatRelativeDate: (millis: number, format?: string) => string;
 export declare const formatRelativeDateFromISO: (iso: string) => string;
 export declare const isDateValid: (iso: string) => boolean;
+//# sourceMappingURL=time.d.ts.map

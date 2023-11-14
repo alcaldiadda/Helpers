@@ -13,3 +13,4 @@ interface OvertimeCalculation {
 }
 export declare const calculateOvertime: ({ start, end, isWorkingDay, timezone }: OvertimeCalculation, overtimeSessions: SchedulesProps[]) => Record<string, OvertimeResult>;
 export {};
+//# sourceMappingURL=calculateOvertime.d.ts.map

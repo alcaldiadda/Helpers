@@ -6,3 +6,4 @@ interface SplitDateRangeInput {
 }
 export declare const splitDateRange: ({ start, end, timezone, }: SplitDateRangeInput) => Period[];
 export {};
+//# sourceMappingURL=splitDateRange.d.ts.map

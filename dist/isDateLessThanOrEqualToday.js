@@ -8,3 +8,4 @@ var isDateLessThanOrEqualToday = function (dateString) {
     return dateToCheck <= today;
 };
 exports.isDateLessThanOrEqualToday = isDateLessThanOrEqualToday;
+//# sourceMappingURL=isDateLessThanOrEqualToday.js.map

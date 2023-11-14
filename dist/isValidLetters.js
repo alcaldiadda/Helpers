@@ -5,3 +5,4 @@ var isValidLetters = function (text) {
     return /^[A-Za-záéíóúÁÉÍÓÚñÑ\s]*$/.test(text);
 };
 exports.isValidLetters = isValidLetters;
+//# sourceMappingURL=isValidLetters.js.map

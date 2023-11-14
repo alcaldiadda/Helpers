@@ -31,3 +31,4 @@ var calculateAge = function (birthday, referenceDate) {
     };
 };
 exports.calculateAge = calculateAge;
+//# sourceMappingURL=calculateAge.js.map

@@ -40,3 +40,4 @@ var splitDateRange = function (_a) {
     return periods;
 };
 exports.splitDateRange = splitDateRange;
+//# sourceMappingURL=splitDateRange.js.map

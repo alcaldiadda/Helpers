@@ -27,3 +27,4 @@ var calculatePeriod = function (_a) {
     };
 };
 exports.calculatePeriod = calculatePeriod;
+//# sourceMappingURL=calculatePeriod.js.map

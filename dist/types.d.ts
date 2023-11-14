@@ -184,3 +184,4 @@ export interface TimeToSubtract {
     hours: number;
     minutes: number;
 }
+//# sourceMappingURL=types.d.ts.map

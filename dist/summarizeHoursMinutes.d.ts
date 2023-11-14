@@ -7,3 +7,4 @@ export declare const summarizeHoursMinutes: (docs: SummarizeHoursMinutesProps[])
     minutes: number;
 };
 export {};
+//# sourceMappingURL=summarizeHoursMinutes.d.ts.map

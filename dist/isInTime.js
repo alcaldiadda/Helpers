@@ -23,3 +23,4 @@ var isInTime = function (inputDate, targetTime, direction, timezone) {
     throw new Error("Invalid direction \"".concat(direction, "\". Must be \"before\" or \"after\"."));
 };
 exports.isInTime = isInTime;
+//# sourceMappingURL=isInTime.js.map

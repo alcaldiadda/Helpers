@@ -8,3 +8,4 @@ export declare class Identification {
     getCheckDigit(): string;
     clean(): string;
 }
+//# sourceMappingURL=Identification.d.ts.map

@@ -8,3 +8,4 @@ exports.WORKING_END_TIME = "17:30";
 exports.LUNCH_START_TIME = "13:00";
 exports.LUNCH_END_TIME = "15:00";
 exports.LUNCH_TIME = 30;
+//# sourceMappingURL=constants.js.map
