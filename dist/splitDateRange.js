@@ -10,7 +10,12 @@ var splitDateRange = function (_a) {
     var periods = [];
     while (startDate < endDate) {
         // Calculate the end of the current day
-        var endOfDay = startDate.set({ hour: 23, minute: 59, second: 59, millisecond: 999 });
+        var endOfDay = startDate.set({
+            hour: 23,
+            minute: 59,
+            second: 59,
+            millisecond: 999,
+        });
         // If the end date is before the end of the current day, use the end date
         var endDayDuration = luxon_1.Interval.fromDateTimes(endOfDay, endDate).length("minutes");
         if (endDate < endOfDay || endDayDuration < 1) {
@@ -25,7 +30,12 @@ var splitDateRange = function (_a) {
             });
         }
         // Set start to the start of the next day
-        startDate = endOfDay.set({ hour: 24, minute: 0, second: 0, millisecond: 0 });
+        startDate = endOfDay.set({
+            hour: 24,
+            minute: 0,
+            second: 0,
+            millisecond: 0,
+        });
     }
     return periods;
 };

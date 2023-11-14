@@ -4,5 +4,5 @@ interface CalculatePeriodProps {
     end: string;
     basePeriodMinutes: number;
 }
-export declare const calculatePeriod: ({ start, end, basePeriodMinutes }: CalculatePeriodProps) => HoursAndExtended;
+export declare const calculatePeriod: ({ start, end, basePeriodMinutes, }: CalculatePeriodProps) => HoursAndExtended;
 export {};

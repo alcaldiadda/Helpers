@@ -16,21 +16,31 @@ var formatDateTimeFromMillis = function (millis, format) {
 exports.formatDateTimeFromMillis = formatDateTimeFromMillis;
 var formatDateTimeFromISO = function (iso, format) {
     if (format === void 0) { format = exports.DEFAULT_DATETIME_FORMAT; }
-    return luxon_1.DateTime.fromISO(iso).setLocale("es-CL").setZone(constants_1.TIMEZONE).toFormat(format) || "";
+    return (luxon_1.DateTime.fromISO(iso)
+        .setLocale("es-CL")
+        .setZone(constants_1.TIMEZONE)
+        .toFormat(format) || "");
 };
 exports.formatDateTimeFromISO = formatDateTimeFromISO;
 var formatDateTimeFromJS = function (date, format) {
     if (format === void 0) { format = exports.DEFAULT_DATETIME_FORMAT; }
-    return luxon_1.DateTime.fromJSDate(date).setLocale("es-CL").setZone(constants_1.TIMEZONE).toFormat(format) || "";
+    return (luxon_1.DateTime.fromJSDate(date)
+        .setLocale("es-CL")
+        .setZone(constants_1.TIMEZONE)
+        .toFormat(format) || "");
 };
 exports.formatDateTimeFromJS = formatDateTimeFromJS;
 var formatRelativeDate = function (millis, format) {
     if (format === void 0) { format = exports.DEFAULT_DATETIME_FORMAT; }
-    return luxon_1.DateTime.fromMillis(millis).setLocale("es-CL").setZone(constants_1.TIMEZONE).toFormat(format) || "";
+    return (luxon_1.DateTime.fromMillis(millis)
+        .setLocale("es-CL")
+        .setZone(constants_1.TIMEZONE)
+        .toFormat(format) || "");
 };
 exports.formatRelativeDate = formatRelativeDate;
 var formatRelativeDateFromISO = function (iso) {
-    return luxon_1.DateTime.fromISO(iso).setLocale("es-CL").setZone(constants_1.TIMEZONE).toRelative() || "";
+    return (luxon_1.DateTime.fromISO(iso).setLocale("es-CL").setZone(constants_1.TIMEZONE).toRelative() ||
+        "");
 };
 exports.formatRelativeDateFromISO = formatRelativeDateFromISO;
 var isDateValid = function (iso) { return luxon_1.DateTime.fromISO(iso).isValid; };

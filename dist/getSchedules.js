@@ -18,7 +18,11 @@ var luxon_1 = require("luxon");
 */
 var getSchedules = function (date, type, schedules) {
     var weekday = luxon_1.DateTime.fromISO(date).weekday;
-    var result = schedules.filter(function (schedule) { return schedule.type.startsWith(type) && weekday >= schedule.dayStart && weekday <= schedule.dayEnd; });
+    var result = schedules.filter(function (schedule) {
+        return schedule.type.startsWith(type) &&
+            weekday >= schedule.dayStart &&
+            weekday <= schedule.dayEnd;
+    });
     return result;
 };
 exports.getSchedules = getSchedules;

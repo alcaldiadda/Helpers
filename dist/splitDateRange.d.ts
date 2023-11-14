@@ -4,5 +4,5 @@ interface SplitDateRangeInput {
     end: string;
     timezone: string;
 }
-export declare const splitDateRange: ({ start, end, timezone }: SplitDateRangeInput) => Period[];
+export declare const splitDateRange: ({ start, end, timezone, }: SplitDateRangeInput) => Period[];
 export {};

@@ -10,7 +10,10 @@ var calculateOvertime = function (_a, overtimeSessions) {
     var overtimeResults = {};
     // Initialize overtimeResults
     overtimeSessions.forEach(function (session) {
-        overtimeResults[session.name] = { minutes: 0, interval: luxon_1.Interval.invalid("Not Set") };
+        overtimeResults[session.name] = {
+            minutes: 0,
+            interval: luxon_1.Interval.invalid("Not Set"),
+        };
     });
     while (startDate < endDate) {
         overtimeSessions.forEach(function (session) {
@@ -20,7 +23,10 @@ var calculateOvertime = function (_a, overtimeSessions) {
                 hour: Number(sessionStartParts[0]),
                 minute: Number(sessionStartParts[1]),
             });
-            var sessionEndDate = startDate.set({ hour: Number(sessionEndParts[0]), minute: Number(sessionEndParts[1]) });
+            var sessionEndDate = startDate.set({
+                hour: Number(sessionEndParts[0]),
+                minute: Number(sessionEndParts[1]),
+            });
             // If the end time is less than start time, it means the session goes into the next day
             if (sessionEndDate < sessionStartDate) {
                 sessionEndDate = sessionEndDate.plus({ days: 1 });
@@ -33,7 +39,8 @@ var calculateOvertime = function (_a, overtimeSessions) {
                     overtimeResults[session.name].interval = intersection;
                 }
                 else {
-                    overtimeResults[session.name].interval = overtimeResults[session.name].interval.union(intersection);
+                    overtimeResults[session.name].interval =
+                        overtimeResults[session.name].interval.union(intersection);
                 }
             }
         });
