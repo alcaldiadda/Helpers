@@ -1,5 +1,5 @@
-import { SchedulesProps } from "./types";
 import { DateTime } from "luxon";
+import { SchedulesProps } from "./Types";
 
 /* 
   Given a date, determine what are the schedules in a array of schedules
@@ -15,11 +15,18 @@ import { DateTime } from "luxon";
     end: string;
   };
 */
-export const getSchedules = (date: string, type: string, schedules: SchedulesProps[]) => {
+export const getSchedules = (
+  date: string,
+  type: string,
+  schedules: SchedulesProps[]
+) => {
   const weekday = DateTime.fromISO(date).weekday;
 
   const result = schedules.filter(
-    (schedule) => schedule.type.startsWith(type) && weekday >= schedule.dayStart && weekday <= schedule.dayEnd
+    (schedule) =>
+      schedule.type.startsWith(type) &&
+      weekday >= schedule.dayStart &&
+      weekday <= schedule.dayEnd
   );
 
   return result;

@@ -1,18 +1,10 @@
 import { DateTime } from "luxon";
+import { TimeObjectProps, TimeToSubtract } from "./Types";
 
-interface TimeObjectProps {
-  hours: number;
-  minutes: number;
-  start: string;
-  end: string;
-}
-
-interface TimeToSubtract {
-  hours: number;
-  minutes: number;
-}
-
-export const subtractTimeObjects = (time1: TimeObjectProps, time2: TimeToSubtract) => {
+export const subtractTimeObjects = (
+  time1: TimeObjectProps,
+  time2: TimeToSubtract
+) => {
   const endTime1 = DateTime.fromISO(time1.end);
 
   let minutes1 = time1.hours * 60 + time1.minutes;

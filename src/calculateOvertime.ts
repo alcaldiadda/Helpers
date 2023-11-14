@@ -1,4 +1,4 @@
-import { SchedulesProps } from "./types";
+import { SchedulesProps } from "./Types";
 import { DateTime, Interval } from "luxon";
 
 interface OvertimeResult {
@@ -24,11 +24,15 @@ export const calculateOvertime = (
 
   const workInterval = Interval.fromDateTimes(startDate, endDate);
 
-  let overtimeResults: Record<string, { minutes: number; interval: Interval }> = {};
+  let overtimeResults: Record<string, { minutes: number; interval: Interval }> =
+    {};
 
   // Initialize overtimeResults
   overtimeSessions.forEach((session) => {
-    overtimeResults[session.name] = { minutes: 0, interval: Interval.invalid("Not Set") };
+    overtimeResults[session.name] = {
+      minutes: 0,
+      interval: Interval.invalid("Not Set"),
+    };
   });
 
   while (startDate < endDate) {
@@ -40,14 +44,20 @@ export const calculateOvertime = (
         hour: Number(sessionStartParts[0]),
         minute: Number(sessionStartParts[1]),
       });
-      let sessionEndDate = startDate.set({ hour: Number(sessionEndParts[0]), minute: Number(sessionEndParts[1]) });
+      let sessionEndDate = startDate.set({
+        hour: Number(sessionEndParts[0]),
+        minute: Number(sessionEndParts[1]),
+      });
 
       // If the end time is less than start time, it means the session goes into the next day
       if (sessionEndDate < sessionStartDate) {
         sessionEndDate = sessionEndDate.plus({ days: 1 });
       }
 
-      const overtimeInterval = Interval.fromDateTimes(sessionStartDate, sessionEndDate);
+      const overtimeInterval = Interval.fromDateTimes(
+        sessionStartDate,
+        sessionEndDate
+      );
 
       const intersection = workInterval.intersection(overtimeInterval);
 
@@ -56,7 +66,8 @@ export const calculateOvertime = (
         if (!overtimeResults[session.name].interval.isValid) {
           overtimeResults[session.name].interval = intersection;
         } else {
-          overtimeResults[session.name].interval = overtimeResults[session.name].interval.union(intersection);
+          overtimeResults[session.name].interval =
+            overtimeResults[session.name].interval.union(intersection);
         }
       }
     });

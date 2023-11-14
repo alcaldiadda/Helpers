@@ -1,4 +1,4 @@
-import { HoursAndExtended } from "./types";
+import { HoursAndExtended } from "./Types";
 
 interface CalculatePeriodProps {
   start: string;
@@ -6,7 +6,11 @@ interface CalculatePeriodProps {
   basePeriodMinutes: number;
 }
 
-export const calculatePeriod = ({ start, end, basePeriodMinutes }: CalculatePeriodProps): HoursAndExtended => {
+export const calculatePeriod = ({
+  start,
+  end,
+  basePeriodMinutes,
+}: CalculatePeriodProps): HoursAndExtended => {
   const startDateTime = new Date(start);
   const endDateTime = new Date(end);
 
