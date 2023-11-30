@@ -11,7 +11,11 @@ interface SessionData {
 }
 
 // Check if data is within session time range
-export const checkTimeRange = (data: DateData, session: SessionData, timezone: string): boolean => {
+export const checkTimeRange = (
+  data: DateData,
+  session: SessionData,
+  timezone: string
+): boolean => {
   const { start: startSession, end: endSession } = session;
   const { start: startDate, end: endDate } = data;
 
@@ -28,6 +32,8 @@ export const checkTimeRange = (data: DateData, session: SessionData, timezone: s
       day: startDateLocal.day,
       hour: startHour,
       minute: startMinute,
+      second: startDateLocal.second,
+      millisecond: startDateLocal.millisecond,
     },
     { zone: timezone }
   );
@@ -39,6 +45,8 @@ export const checkTimeRange = (data: DateData, session: SessionData, timezone: s
       day: endDateLocal.day,
       hour: endHour,
       minute: endMinute,
+      second: endDateLocal.second,
+      millisecond: endDateLocal.millisecond,
     },
     { zone: timezone }
   );
