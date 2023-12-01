@@ -19,11 +19,12 @@ export const checkTimeRange = (
   const { start: startSession, end: endSession } = session;
   const { start: startDate, end: endDate } = data;
 
-  const startDateLocal = DateTime.fromISO(startDate).setZone(timezone);
-  const endDateLocal = DateTime.fromISO(endDate).setZone(timezone);
-
-  startDateLocal.set({ second: 0, millisecond: 0 });
-  endDateLocal.set({ second: 0, millisecond: 0 });
+  const startDateLocal = DateTime.fromISO(startDate)
+    .set({ second: 0, millisecond: 0 })
+    .setZone(timezone);
+  const endDateLocal = DateTime.fromISO(endDate)
+    .set({ second: 0, millisecond: 0 })
+    .setZone(timezone);
 
   const [startHour, startMinute] = startSession.split(":").map(Number);
   const [endHour, endMinute] = endSession.split(":").map(Number);
@@ -35,8 +36,6 @@ export const checkTimeRange = (
       day: startDateLocal.day,
       hour: startHour,
       minute: startMinute,
-      second: 0,
-      millisecond: 0,
     },
     { zone: timezone }
   );
@@ -48,8 +47,6 @@ export const checkTimeRange = (
       day: endDateLocal.day,
       hour: endHour,
       minute: endMinute,
-      second: 0,
-      millisecond: 0,
     },
     { zone: timezone }
   );
