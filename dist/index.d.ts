@@ -21,6 +21,7 @@ export * from "./isValidLetters";
 export * from "./isValidPhone";
 export * from "./isValidPid";
 export * from "./minutesSinceMidnight";
+export * from "./schedules";
 export * from "./setCookie";
 export * from "./splitDateRange";
 export * from "./subtractTimeObject";
