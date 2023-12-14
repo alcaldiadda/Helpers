@@ -36,6 +36,7 @@ __exportStar(require("./isStructurallyEqual"), exports);
 __exportStar(require("./isValidLetters"), exports);
 __exportStar(require("./isValidPhone"), exports);
 __exportStar(require("./isValidPid"), exports);
+__exportStar(require("./minutesSinceMidnight"), exports);
 __exportStar(require("./setCookie"), exports);
 __exportStar(require("./splitDateRange"), exports);
 __exportStar(require("./subtractTimeObject"), exports);
