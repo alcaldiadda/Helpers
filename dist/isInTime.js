@@ -2,8 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isInTime = void 0;
 var luxon_1 = require("luxon");
-var isInTime = function (inputDate, targetTime, direction, timezone) {
-    var dateInUtc = luxon_1.DateTime.fromJSDate(inputDate, { zone: "utc" });
+var isInTime = function (utcDate, targetTime, direction, zone) {
+    var dateInUtc = luxon_1.DateTime.fromJSDate(utcDate, { zone: "utc" });
     var _a = targetTime.split(":").map(Number), hours = _a[0], minutes = _a[1];
     var targetDate = luxon_1.DateTime.fromObject({
         year: dateInUtc.year,
@@ -11,9 +11,9 @@ var isInTime = function (inputDate, targetTime, direction, timezone) {
         day: dateInUtc.day,
         hour: hours,
         minute: minutes,
-    })
-        .setZone(timezone)
-        .toUTC();
+    }, {
+        zone: zone,
+    }).toUTC();
     if (direction === "before") {
         return dateInUtc <= targetDate;
     }
