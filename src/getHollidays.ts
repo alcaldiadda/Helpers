@@ -22,7 +22,7 @@ export const getHollidays = async (date: string, forceUpdate = false) => {
     const request = await fetch(
       `https://apis.digital.gob.cl/fl/feriados/${year}`
     );
-    hollidays = request.json();
+    hollidays = await request.json();
     fs.writeFileSync(`${folder}${filename}`, JSON.stringify(hollidays));
   } else {
     hollidays = fs.readFileSync(`${folder}${filename}`, { encoding: "utf-8" });

@@ -51,19 +51,21 @@ var getHollidays = function (date, forceUpdate) {
                     year = new Date(date).getFullYear();
                     folder = "./hollidays/";
                     filename = "".concat(year, ".json");
-                    if (!(!fs_1.default.existsSync("".concat(folder).concat(filename)) || forceUpdate)) return [3 /*break*/, 2];
+                    if (!(!fs_1.default.existsSync("".concat(folder).concat(filename)) || forceUpdate)) return [3 /*break*/, 3];
                     fs_1.default.mkdirSync(folder, { recursive: true });
                     return [4 /*yield*/, fetch("https://apis.digital.gob.cl/fl/feriados/".concat(year))];
                 case 1:
                     request = _a.sent();
-                    hollidays = request.json();
-                    fs_1.default.writeFileSync("".concat(folder).concat(filename), JSON.stringify(hollidays));
-                    return [3 /*break*/, 3];
+                    return [4 /*yield*/, request.json()];
                 case 2:
+                    hollidays = _a.sent();
+                    fs_1.default.writeFileSync("".concat(folder).concat(filename), JSON.stringify(hollidays));
+                    return [3 /*break*/, 4];
+                case 3:
                     hollidays = fs_1.default.readFileSync("".concat(folder).concat(filename), { encoding: "utf-8" });
                     hollidays = JSON.parse(hollidays);
-                    _a.label = 3;
-                case 3: return [2 /*return*/, hollidays];
+                    _a.label = 4;
+                case 4: return [2 /*return*/, hollidays];
             }
         });
     });
