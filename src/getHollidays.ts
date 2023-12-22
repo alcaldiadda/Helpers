@@ -8,7 +8,7 @@ export interface HolidayResponseProps {
   tipo: string;
 }
 
-export const getHolidays = async (date: string, forceUpdate = false) => {
+export const getHollidays = async (date: string, forceUpdate = false) => {
   // check holidays
   const year = new Date(date).getFullYear();
   const folder = "./hollidays/";
