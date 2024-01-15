@@ -3,6 +3,7 @@ import {
   calculateOvertime,
   calculatePeriod,
   checkTimeRange,
+  getHollidays,
   getSchedules,
   isInTime,
   splitDateRange,
@@ -393,8 +394,6 @@ describe("Helper Functions", () => {
 
     const onTime = checkTimeRange(data, session, "America/Santiago");
 
-    console.log({ onTime });
-
     expect(onTime).toBe(true);
   });
 
@@ -435,7 +434,7 @@ describe("Helper Functions", () => {
   });
 
   test("isInTime - before checks", () => {
-    const data = new Date("2023-06-16T08:30:00Z");
+    const data = "2023-06-16T08:30:00Z";
 
     const inTime = isInTime(data, "08:40", "before", "America/Santiago");
     const inTimeEqual = isInTime(data, "08:30", "before", "America/Santiago");
@@ -447,7 +446,7 @@ describe("Helper Functions", () => {
   });
 
   test("isInTime - after checks", () => {
-    const data = new Date("2023-06-16T08:30:00Z");
+    const data = "2023-06-16T08:30:00Z";
 
     const inTime = isInTime(data, "08:40", "after", "America/Santiago");
     const inTimeEqual = isInTime(data, "08:30", "after", "America/Santiago");
@@ -459,7 +458,7 @@ describe("Helper Functions", () => {
   });
 
   test("isInTime", () => {
-    const data = new Date("2023-06-16T08:30:00Z");
+    const data = "2023-06-16T08:30:00Z";
 
     const inTime = isInTime(data, "08:40", "after", "America/Santiago");
     const inTimeEqual = isInTime(data, "08:30", "after", "America/Santiago");
@@ -468,6 +467,17 @@ describe("Helper Functions", () => {
     expect(inTime).toBe(false);
     expect(inTimeEqual).toBe(true);
     expect(offTime).toBe(true);
+  });
+
+  test("isInTime - midnight edge", () => {
+    const dataBefore = "2023-06-16T02:59:00Z";
+    const dataAfter = "2023-06-16T03:00:00Z";
+
+    const before = isInTime(dataBefore, "12:00", "before", "America/Santiago");
+    const after = isInTime(dataAfter, "12:00", "after", "America/Santiago");
+
+    expect(before).toBe(true);
+    expect(after).toBe(false);
   });
 
   test("getSchedule - single, multiple", () => {
@@ -520,5 +530,11 @@ describe("Helper Functions", () => {
 
     expect(single.length).toBe(1);
     expect(multiple.length).toBe(2);
+  });
+
+  test("isHolliday - getting info", async () => {
+    const hollidays = await getHollidays("2023-08-03T08:30:00Z");
+
+    expect(hollidays.length).toBeGreaterThan(0);
   });
 });
