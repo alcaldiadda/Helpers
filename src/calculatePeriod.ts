@@ -34,8 +34,8 @@ export const calculatePeriod = ({
   const minutesExtended = extendedMinutes % 60;
 
   return {
-    hours,
-    minutes,
+    hours: hours + hoursExtended,
+    minutes: minutes + minutesExtended,
     hoursExtended,
     minutesExtended,
   };
