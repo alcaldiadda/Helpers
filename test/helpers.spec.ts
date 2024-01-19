@@ -61,9 +61,11 @@ describe("Helper Functions", () => {
     });
 
     expect(extendedCalculation.hours).toBe(9);
-    expect(extendedCalculation.minutes).toBe(15);
+    expect(extendedCalculation.minutes).toBe(0);
     expect(extendedCalculation.hoursExtended).toBe(0);
     expect(extendedCalculation.minutesExtended).toBe(15);
+    expect(extendedCalculation.totalHours).toBe(9);
+    expect(extendedCalculation.totalMinutes).toBe(15);
   });
 
   test("calculate working time - use only minutes as precision", () => {
@@ -78,9 +80,11 @@ describe("Helper Functions", () => {
     });
 
     expect(normalCalulation.hours).toBe(9);
-    expect(normalCalulation.minutes).toBe(39);
+    expect(normalCalulation.minutes).toBe(0);
     expect(normalCalulation.hoursExtended).toBe(0);
     expect(normalCalulation.minutesExtended).toBe(39);
+    expect(normalCalulation.totalHours).toBe(9);
+    expect(normalCalulation.totalMinutes).toBe(39);
   });
 
   test("calculate lunch time - normal", () => {
@@ -112,9 +116,11 @@ describe("Helper Functions", () => {
     });
 
     expect(calulation.hours).toBe(0);
-    expect(calulation.minutes).toBe(45);
+    expect(calulation.minutes).toBe(30);
     expect(calulation.hoursExtended).toBe(0);
     expect(calulation.minutesExtended).toBe(15);
+    expect(calulation.totalHours).toBe(0);
+    expect(calulation.totalMinutes).toBe(45);
   });
 
   test("calculate working time - lunch extended", () => {
