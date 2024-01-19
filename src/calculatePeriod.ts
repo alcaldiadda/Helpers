@@ -14,6 +14,13 @@ export const calculatePeriod = ({
   const startDateTime = new Date(start);
   const endDateTime = new Date(end);
 
+  // do not considerate seconds as it may cause some confusions
+  // in the calculation, the UI is expected to show only minutes
+  // use seconds can variate by one minute. Doing this will avoid
+  // any problem
+  startDateTime.setSeconds(0);
+  endDateTime.setSeconds(0);
+
   // Calculate total lunch time in minutes
   const diffMs = Math.abs(endDateTime.getTime() - startDateTime.getTime());
   const totalLunchMinutes = Math.floor(diffMs / 1000 / 60);
