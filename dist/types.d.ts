@@ -162,6 +162,8 @@ export interface HoursAndExtended {
     minutes: number;
     hoursExtended: number;
     minutesExtended: number;
+    totalHours: number;
+    totalMinutes: number;
 }
 export interface Period {
     start: string;

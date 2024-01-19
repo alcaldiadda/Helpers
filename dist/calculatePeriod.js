@@ -26,10 +26,12 @@ var calculatePeriod = function (_a) {
     var hoursExtended = Math.floor(extendedMinutes / 60);
     var minutesExtended = extendedMinutes % 60;
     return {
-        hours: hours + hoursExtended,
-        minutes: minutes + minutesExtended,
+        hours: hours,
+        minutes: minutes,
         hoursExtended: hoursExtended,
         minutesExtended: minutesExtended,
+        totalHours: hours + hoursExtended,
+        totalMinutes: minutes + minutesExtended,
     };
 };
 exports.calculatePeriod = calculatePeriod;

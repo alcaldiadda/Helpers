@@ -41,9 +41,11 @@ export const calculatePeriod = ({
   const minutesExtended = extendedMinutes % 60;
 
   return {
-    hours: hours + hoursExtended,
-    minutes: minutes + minutesExtended,
+    hours: hours,
+    minutes: minutes,
     hoursExtended,
     minutesExtended,
+    totalHours: hours + hoursExtended,
+    totalMinutes: minutes + minutesExtended,
   };
 };
