@@ -61,9 +61,26 @@ describe("Helper Functions", () => {
     });
 
     expect(extendedCalculation.hours).toBe(9);
-    expect(extendedCalculation.minutes).toBe(0);
+    expect(extendedCalculation.minutes).toBe(15);
     expect(extendedCalculation.hoursExtended).toBe(0);
     expect(extendedCalculation.minutesExtended).toBe(15);
+  });
+
+  test("calculate working time - use only minutes as precision", () => {
+    const normalStart = "2023-06-15T11:30:02.000Z";
+    const normalEnd = "2023-06-15T21:09:00.000Z";
+    const normalBasePeriod = 9 * 60; // 9 hours
+
+    const normalCalulation = calculatePeriod({
+      start: normalStart,
+      end: normalEnd,
+      basePeriodMinutes: normalBasePeriod,
+    });
+
+    expect(normalCalulation.hours).toBe(9);
+    expect(normalCalulation.minutes).toBe(39);
+    expect(normalCalulation.hoursExtended).toBe(0);
+    expect(normalCalulation.minutesExtended).toBe(39);
   });
 
   test("calculate lunch time - normal", () => {
@@ -95,7 +112,7 @@ describe("Helper Functions", () => {
     });
 
     expect(calulation.hours).toBe(0);
-    expect(calulation.minutes).toBe(30);
+    expect(calulation.minutes).toBe(45);
     expect(calulation.hoursExtended).toBe(0);
     expect(calulation.minutesExtended).toBe(15);
   });
