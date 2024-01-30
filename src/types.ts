@@ -3,36 +3,36 @@ import { Models } from "./models";
 /**
  * DATABASE TYPES
  */
-export interface HomeCard {
+export type HomeCard = {
   title: string;
   body: string;
   image: string;
   category: string;
-}
+};
 export type HomeCardProps = Models.Document & HomeCard;
 
-export interface Profile {
+export type Profile = {
   name: string;
   pid: string;
   avatar?: string;
   title?: string;
   mobile?: string;
   department?: string;
-}
+};
 export type ProfileProps = Models.Document & Profile;
 
-export interface Neighborhood {
+export type Neighborhood = {
   name: string;
-}
+};
 export type NeighborhoodProps = Models.Document & Neighborhood;
 
-export interface Christmas {
+export type Christmas = {
   user: UserProps;
   pid: string;
-}
+};
 export type ChristmasProps = Models.Document & Christmas;
 
-export interface User {
+export type User = {
   name: string;
   firstname: string;
   lastname: string;
@@ -47,19 +47,19 @@ export interface User {
   email?: string;
   phone?: string;
   registeredBy?: string;
-}
+};
 export type UserProps = Models.Document & User;
 export type UserTypeForm = Omit<User, "birthday" | "neighborhood"> & {
   birthday: Date;
   neighborhood?: string;
 };
 
-export interface Menu {
+export type Menu = {
   key: string;
-}
+};
 export type MenuProps = Models.Document & Menu;
 
-export interface Lunch {
+export type Lunch = {
   profile: ProfileProps;
   start: string;
   end?: string;
@@ -68,7 +68,7 @@ export interface Lunch {
   isInRange: boolean;
   hoursExtended: number;
   minutesExtended: number;
-}
+};
 export type LunchProps = Models.Document & Lunch;
 
 export enum OvertimeTypes {
@@ -76,26 +76,26 @@ export enum OvertimeTypes {
   TYPE_50 = "TYPE_50",
 }
 
-export interface Overtime {
+export type Overtime = {
   profile: ProfileProps;
   start: string;
   end?: string;
   hours: number;
   minutes: number;
   type: OvertimeTypes;
-}
+};
 export type OvertimeProps = Models.Document & Overtime;
 
-export interface Markin {
+export type Markin = {
   profile: ProfileProps;
   profileId: string;
   workday: string;
   date: string;
   isComputed: boolean;
-}
+};
 export type MarkinProps = Models.Document & Markin;
 
-export interface Workday {
+export type Workday = {
   profile: ProfileProps;
   start: string;
   end?: string;
@@ -106,70 +106,70 @@ export interface Workday {
   lunch?: LunchProps;
   overtime: OvertimeProps[];
   markin: MarkinProps[];
-}
+};
 export type WorkdayProps = Models.Document & Workday;
 
-export interface Holliday {
+export type Holliday = {
   name: string;
   date: string;
-}
+};
 export type HollidayProps = Models.Document & Holliday;
 
-export interface ClockMarkinOptionProps {
+export type ClockMarkinOptionProps = {
   isWorkingDay: boolean;
   isLeaveDay: boolean;
-}
+};
 export type formatArgumentType = string | Date | number | boolean;
 
-export interface WorkCount {
+export type WorkCount = {
   profileId: string;
   type: string;
   date: string;
   hours: number;
   minutes: number;
-}
+};
 export type WorkCountProps = Models.Document & WorkCount;
 
-export interface Configuration {
+export type Configuration = {
   key: string;
   option: string;
-}
+};
 export type ConfigurationProps = Models.Document & Configuration;
 
 /**
  * PROYECT TYPES
  */
-export interface FilterProps {
+export type FilterProps = {
   column: SelectOptionProps;
   operator: SelectOptionProps;
   value: formatArgumentType;
   optional: formatArgumentType;
-}
+};
 
-export interface FilterFormProps {
+export type FilterFormProps = {
   column: string;
   operator: string;
   value: formatArgumentType;
   optional: formatArgumentType;
-}
+};
 
-export interface TimeHoursMinutes {
+export type TimeHoursMinutes = {
   hours: number;
   minutes: number;
-}
+};
 
-export interface SelectOptionProps {
+export type SelectOptionProps = {
   label: string;
   value: string;
-}
+};
 
-export interface addMarkin {
+export type addMarkin = {
   $id: string;
   date: string | Date;
   isClock: boolean;
-}
+};
 
-export interface SchedulesProps {
+export type SchedulesProps = {
   name: string;
   type: string;
   dayStart: number;
@@ -178,41 +178,41 @@ export interface SchedulesProps {
     start: string;
     end: string;
   };
-}
+};
 
-export interface HoursAndExtended {
+export type HoursAndExtended = {
   hours: number;
   minutes: number;
   hoursExtended: number;
   minutesExtended: number;
   totalHours: number;
   totalMinutes: number;
-}
+};
 
-export interface Period {
+export type Period = {
   start: string;
   end: string;
-}
+};
 
-export interface ServerSession {
+export type ServerSession = {
   cookie: string;
   session: {
     account: Models.User<Models.Preferences> | null;
     menu: MenuProps[];
   };
-}
+};
 
-export interface TimeObjectProps {
+export type TimeObjectProps = {
   hours: number;
   minutes: number;
   start: string;
   end: string;
-}
+};
 
-export interface TimeToSubtract {
+export type TimeToSubtract = {
   hours: number;
   minutes: number;
-}
+};
 
 /** FINANCE */
 
