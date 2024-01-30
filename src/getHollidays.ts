@@ -1,5 +1,3 @@
-import fs from "fs";
-
 export interface HolidayResponseProps {
   nombre: string;
   comentarios: string | null;
@@ -15,6 +13,8 @@ export const getHollidays = async (date: string, forceUpdate = false) => {
   const filename = `${year}.json`;
 
   let hollidays;
+
+  const fs = await import("fs");
 
   if (!fs.existsSync(`${folder}${filename}`) || forceUpdate) {
     fs.mkdirSync(folder, { recursive: true });
