@@ -17,6 +17,7 @@ export interface Profile {
   avatar?: string;
   title?: string;
   mobile?: string;
+  department?: string;
 }
 export type ProfileProps = Models.Document & Profile;
 
@@ -212,3 +213,58 @@ export interface TimeToSubtract {
   hours: number;
   minutes: number;
 }
+
+/** FINANCE */
+
+export type FinanceRequest = {
+  requestId: string;
+  departmentId: string;
+  documentType: string;
+  classification: string;
+  content?: string;
+  purchaseType?: string;
+  managerId?: string;
+  amount: number;
+  publishingDate: string;
+  awairdId: string;
+  awardDate: string;
+  supplierId: string;
+  purchaseOrderId: string;
+  purchaseOrderDate: string;
+  purchaseOrderLink: string;
+};
+
+export type FinanceRequestProps = FinanceRequest & Models.Document;
+
+export type FinanceTracking = {
+  requestId: string;
+  submit: string;
+  departmentId: string;
+  note: string;
+};
+
+export type FinanceTrackingProps = FinanceTracking & Models.Document;
+
+export type FinanceTimeline = {
+  profileId: string;
+  eventName: string;
+  additional: string;
+};
+
+export type FinanceTimelineProps = FinanceTimeline & Models.Document;
+
+export type FinanceSupplier = {
+  pid: string;
+  name: string;
+  mobile?: string;
+  phone?: string;
+  email?: string;
+  accountNumber?: string;
+  accountBank?: string;
+  emailNotification?: string;
+  emailSubjet?: string;
+  legalRepresentativeName?: string;
+  legalRepresentativePid?: string;
+};
+
+export type FinanceSupplierProps = FinanceSupplier & Models.Document;
