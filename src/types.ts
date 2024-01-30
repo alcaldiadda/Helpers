@@ -17,7 +17,8 @@ export type Profile = {
   avatar?: string;
   title?: string;
   mobile?: string;
-  department?: string;
+  departmentId?: string;
+  department?: Department;
 };
 export type ProfileProps = Models.Document & Profile;
 
