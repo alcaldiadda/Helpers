@@ -217,6 +217,8 @@ export type FinanceTracking = {
     requestId: string;
     submit: string;
     departmentId: string;
+    department?: DepartmentProps;
+    profile?: Profile;
     note: string;
 };
 export type FinanceTrackingProps = FinanceTracking & Models.Document;
