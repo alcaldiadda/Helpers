@@ -225,7 +225,7 @@ export type TimeToSubtract = {
 /** FINANCE */
 
 export type FinanceRequest = {
-  requestId: string;
+  requestNumber: string;
   departmentId: string;
   documentType: string;
   classification: string;
