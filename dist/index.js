@@ -25,7 +25,6 @@ __exportStar(require("./diffBetweenDates"), exports);
 __exportStar(require("./emailValidation"), exports);
 __exportStar(require("./extractError"), exports);
 __exportStar(require("./getCookie"), exports);
-__exportStar(require("./getHollidays"), exports);
 __exportStar(require("./getObjectData"), exports);
 __exportStar(require("./getSchedules"), exports);
 __exportStar(require("./Identification"), exports);

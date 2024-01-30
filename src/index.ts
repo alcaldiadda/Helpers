@@ -9,7 +9,6 @@ export * from "./diffBetweenDates";
 export * from "./emailValidation";
 export * from "./extractError";
 export * from "./getCookie";
-export * from "./getHollidays";
 export * from "./getObjectData";
 export * from "./getSchedules";
 export * from "./Identification";
