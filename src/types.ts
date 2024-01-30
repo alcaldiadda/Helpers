@@ -21,6 +21,13 @@ export type Profile = {
 };
 export type ProfileProps = Models.Document & Profile;
 
+export type Department = {
+  name: string;
+  short_name: string;
+  parentId?: string;
+};
+export type DepartmentProps = Models.Document & Department;
+
 export type Neighborhood = {
   name: string;
 };
