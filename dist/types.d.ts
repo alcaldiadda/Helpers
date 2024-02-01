@@ -198,6 +198,7 @@ export type TimeToSubtract = {
 export type FinanceRequest = {
     requestNumber: string;
     departmentId: string;
+    department: DepartmentProps;
     documentType: string;
     classification: string;
     content?: string;
