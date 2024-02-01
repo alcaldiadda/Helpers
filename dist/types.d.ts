@@ -212,6 +212,7 @@ export type FinanceRequest = {
     purchaseOrderId: string;
     purchaseOrderDate: string;
     purchaseOrderLink: string;
+    tag: string[];
 };
 export type FinanceRequestProps = FinanceRequest & Models.Document;
 export type FinanceTracking = {
