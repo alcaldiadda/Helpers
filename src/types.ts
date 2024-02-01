@@ -235,8 +235,8 @@ export type FinanceRequest = {
   managerId?: string;
   amount: number;
   publishingDate: string;
-  awairdId: string;
   awardDate: string;
+  awardAcceptanceDate: string;
   supplierId: string;
   purchaseOrderId: string;
   purchaseOrderDate: string;
