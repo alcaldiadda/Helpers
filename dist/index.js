@@ -19,6 +19,7 @@ __exportStar(require("./calculateOvertime"), exports);
 __exportStar(require("./calculatePeriod"), exports);
 __exportStar(require("./capitalize"), exports);
 __exportStar(require("./checkTimeRange"), exports);
+__exportStar(require("./compareObject"), exports);
 __exportStar(require("./constants"), exports);
 __exportStar(require("./delCookie"), exports);
 __exportStar(require("./diffBetweenDates"), exports);

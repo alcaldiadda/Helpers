@@ -3,6 +3,7 @@ export * from "./calculateOvertime";
 export * from "./calculatePeriod";
 export * from "./capitalize";
 export * from "./checkTimeRange";
+export * from "./compareObject";
 export * from "./constants";
 export * from "./delCookie";
 export * from "./diffBetweenDates";
