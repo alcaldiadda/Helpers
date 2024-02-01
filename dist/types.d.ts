@@ -225,7 +225,9 @@ export type FinanceTracking = {
 };
 export type FinanceTrackingProps = FinanceTracking & Models.Document;
 export type FinanceTimeline = {
+    requestId: string;
     profileId: string;
+    profile?: Profile;
     eventName: string;
     additional: string;
 };
