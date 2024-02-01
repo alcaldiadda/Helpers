@@ -233,11 +233,13 @@ export type FinanceRequest = {
   content?: string;
   purchaseType?: string;
   managerId?: string;
+  manager: ProfileProps;
   amount: number;
   publishingDate: string;
   awardDate: string;
   awardAcceptanceDate: string;
   supplierId: string;
+  supplier: FinanceSupplierProps;
   purchaseOrderId: string;
   purchaseOrderDate: string;
   purchaseOrderLink: string;
