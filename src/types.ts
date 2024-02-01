@@ -235,6 +235,7 @@ export type FinanceRequest = {
   managerId?: string;
   manager: ProfileProps;
   amount: number;
+  publishingId: string;
   publishingDate: string;
   awardDate: string;
   awardAcceptanceDate: string;
