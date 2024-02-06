@@ -1,3 +1,4 @@
+export * from "./banks";
 export * from "./calculateAge";
 export * from "./calculateOvertime";
 export * from "./calculatePeriod";
@@ -10,8 +11,10 @@ export * from "./diffBetweenDates";
 export * from "./emailValidation";
 export * from "./extractError";
 export * from "./getCookie";
+export * from "./getInitials";
 export * from "./getObjectData";
 export * from "./getSchedules";
+export * from "./getFirstWord";
 export * from "./Identification";
 export * from "./isDateLessThanOrEqualToday";
 export * from "./isInTime";

@@ -14,6 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./banks"), exports);
 __exportStar(require("./calculateAge"), exports);
 __exportStar(require("./calculateOvertime"), exports);
 __exportStar(require("./calculatePeriod"), exports);
@@ -26,8 +27,10 @@ __exportStar(require("./diffBetweenDates"), exports);
 __exportStar(require("./emailValidation"), exports);
 __exportStar(require("./extractError"), exports);
 __exportStar(require("./getCookie"), exports);
+__exportStar(require("./getInitials"), exports);
 __exportStar(require("./getObjectData"), exports);
 __exportStar(require("./getSchedules"), exports);
+__exportStar(require("./getFirstWord"), exports);
 __exportStar(require("./Identification"), exports);
 __exportStar(require("./isDateLessThanOrEqualToday"), exports);
 __exportStar(require("./isInTime"), exports);
