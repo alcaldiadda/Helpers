@@ -288,18 +288,15 @@ export type FinanceSupplier = {
 export type FinanceSupplierProps = FinanceSupplier & Models.Document;
 
 export type FinanceReport = {
-  pid: string;
-  name: string;
-  mobile?: string;
-  phone?: string;
-  email: string;
-  accountBank?: string;
-  accountType?: string;
-  accountNumber?: string;
-  emailNotification?: string;
-  emailSubject?: string;
-  legalRepresentativeName?: string;
-  legalRepresentativePid?: string;
+  requestId: string;
+  date: string;
+  state: string;
+  separator?: string;
+  amount: number;
+  type: string;
+  id?: string;
+  note?: string;
+  link?: string;
 };
 
 export type FinanceReportProps = FinanceReport & Models.Document;
