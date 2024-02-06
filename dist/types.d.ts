@@ -250,3 +250,18 @@ export type FinanceSupplier = {
     legalRepresentativePid?: string;
 };
 export type FinanceSupplierProps = FinanceSupplier & Models.Document;
+export type FinanceReport = {
+    pid: string;
+    name: string;
+    mobile?: string;
+    phone?: string;
+    email: string;
+    accountBank?: string;
+    accountType?: string;
+    accountNumber?: string;
+    emailNotification?: string;
+    emailSubject?: string;
+    legalRepresentativeName?: string;
+    legalRepresentativePid?: string;
+};
+export type FinanceReportProps = FinanceReport & Models.Document;
