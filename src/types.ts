@@ -276,10 +276,11 @@ export type FinanceSupplier = {
   mobile?: string;
   phone?: string;
   email?: string;
-  accountNumber?: string;
   accountBank?: string;
+  accountType?: string;
+  accountNumber?: string;
   emailNotification?: string;
-  emailSubjet?: string;
+  emailSubject?: string;
   legalRepresentativeName?: string;
   legalRepresentativePid?: string;
 };
