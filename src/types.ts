@@ -265,7 +265,7 @@ export type FinanceTimeline = {
   profileId: string;
   profile?: Profile;
   eventName: string;
-  additional: string;
+  additional?: string;
 };
 
 export type FinanceTimelineProps = FinanceTimeline & Models.Document;
@@ -275,7 +275,7 @@ export type FinanceSupplier = {
   name: string;
   mobile?: string;
   phone?: string;
-  email?: string;
+  email: string;
   accountBank?: string;
   accountType?: string;
   accountNumber?: string;
