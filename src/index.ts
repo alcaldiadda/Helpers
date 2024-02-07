@@ -10,6 +10,7 @@ export * from "./delCookie";
 export * from "./diffBetweenDates";
 export * from "./emailValidation";
 export * from "./extractError";
+export * from "./finance";
 export * from "./getCookie";
 export * from "./getInitials";
 export * from "./getObjectData";

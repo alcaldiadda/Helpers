@@ -26,6 +26,7 @@ __exportStar(require("./delCookie"), exports);
 __exportStar(require("./diffBetweenDates"), exports);
 __exportStar(require("./emailValidation"), exports);
 __exportStar(require("./extractError"), exports);
+__exportStar(require("./finance"), exports);
 __exportStar(require("./getCookie"), exports);
 __exportStar(require("./getInitials"), exports);
 __exportStar(require("./getObjectData"), exports);
