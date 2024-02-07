@@ -24,6 +24,7 @@ export * from "./isStructurallyEqual";
 export * from "./isValidLetters";
 export * from "./isValidPhone";
 export * from "./isValidPid";
+export * from "./isValidURL";
 export * from "./minutesSinceMidnight";
 export * from "./parseOrBlank";
 export * from "./removeBlankValues";

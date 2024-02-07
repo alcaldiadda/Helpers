@@ -40,6 +40,7 @@ __exportStar(require("./isStructurallyEqual"), exports);
 __exportStar(require("./isValidLetters"), exports);
 __exportStar(require("./isValidPhone"), exports);
 __exportStar(require("./isValidPid"), exports);
+__exportStar(require("./isValidURL"), exports);
 __exportStar(require("./minutesSinceMidnight"), exports);
 __exportStar(require("./parseOrBlank"), exports);
 __exportStar(require("./removeBlankValues"), exports);
