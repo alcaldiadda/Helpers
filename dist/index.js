@@ -42,6 +42,7 @@ __exportStar(require("./isValidPhone"), exports);
 __exportStar(require("./isValidPid"), exports);
 __exportStar(require("./isValidURL"), exports);
 __exportStar(require("./minutesSinceMidnight"), exports);
+__exportStar(require("./omitValueFromObject"), exports);
 __exportStar(require("./parseOrBlank"), exports);
 __exportStar(require("./removeBlankValues"), exports);
 __exportStar(require("./schedules"), exports);

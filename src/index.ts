@@ -26,6 +26,7 @@ export * from "./isValidPhone";
 export * from "./isValidPid";
 export * from "./isValidURL";
 export * from "./minutesSinceMidnight";
+export * from "./omitValueFromObject";
 export * from "./parseOrBlank";
 export * from "./removeBlankValues";
 export * from "./schedules";
