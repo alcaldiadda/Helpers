@@ -23,4 +23,24 @@ exports.documentAttachmentTypes = [
     { value: "COTIZACIÓN", label: "Cotización" },
     { value: "CARTA", label: "Carta" },
     { value: "BOLETA", label: "Boleta" },
+    {
+        value: "CERTIFICADO_INGRESO_ADMINISTRACION_PUBLCA",
+        label: "Certificado de Ingreso a la Administración Pública",
+    },
+    {
+        value: "DECLARACION_JURADA",
+        label: "Declaración Jurada",
+    },
+    {
+        value: "FOTOCOPIA_CEDULA",
+        label: "Fotocopia de Cédula de Identidad",
+    },
+    {
+        value: "TITULO_ESTUDIOS",
+        label: "Título de Estudios",
+    },
+    {
+        value: "CERTIFICADO_ESTUDIOS",
+        label: "Certificado de Estudios",
+    },
 ];
