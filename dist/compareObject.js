@@ -11,7 +11,7 @@ var compareObject = function (original, modified) {
         if (!(key in modified)) {
             del.push((_a = {}, _a[key] = original[key], _a));
         }
-        else if (original[key] !== modified[key]) {
+        else if (String(original[key]) !== String(modified[key])) {
             mod.push((_b = {}, _b[key] = [original[key], modified[key]], _b));
         }
     }

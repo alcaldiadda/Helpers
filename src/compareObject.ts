@@ -16,7 +16,7 @@ export const compareObject = (
   for (const key in original) {
     if (!(key in modified)) {
       del.push({ [key]: original[key] });
-    } else if (original[key] !== modified[key]) {
+    } else if (String(original[key]) !== String(modified[key])) {
       mod.push({ [key]: [original[key], modified[key]] });
     }
   }
