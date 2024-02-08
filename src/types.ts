@@ -254,7 +254,7 @@ export type FinanceTracking = {
   submit: string;
   departmentId: string;
   department?: DepartmentProps;
-  profile?: Profile;
+  profile?: ProfileProps;
   note: string;
 };
 
@@ -263,7 +263,7 @@ export type FinanceTrackingProps = FinanceTracking & Models.Document;
 export type FinanceTimeline = {
   requestId: string;
   profileId: string;
-  profile?: Profile;
+  profile?: ProfileProps;
   eventName: string;
   additional?: string;
 };
