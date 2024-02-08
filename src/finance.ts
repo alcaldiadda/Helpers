@@ -11,5 +11,15 @@ export const documentTypes = [
   { value: "COMPROBANTE", label: "Comprobante" },
 ];
 
-export const documentState = [{ label: "Activo", value: "ACTIVO" },
-{ label: "Anulado", value: "ANULADO" }];
+export const documentState = [
+  { label: "Activo", value: "ACTIVO" },
+  { label: "Anulado", value: "ANULADO" },
+];
+
+export const documentAttachmentTypes = [
+  { value: "CONTRATO", label: "Contrato" },
+  { value: "DECRETO_ALCALDICIO", label: "Decreto Alcaldicio" },
+  { value: "COTIZACIÓN", label: "Cotización" },
+  { value: "CARTA", label: "Carta" },
+  { value: "BOLETA", label: "Boleta" },
+];
