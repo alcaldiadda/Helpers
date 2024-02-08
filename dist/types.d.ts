@@ -269,3 +269,13 @@ export type FinanceAttachment = {
     link: string;
 };
 export type FinanceAttachmentProps = FinanceAttachment & Models.Document;
+export type FinanceWarehouse = {
+    requestId: string;
+    date: string;
+    id: string;
+    reportId: string;
+    report: FinanceReportProps;
+    link: string;
+    note?: string;
+};
+export type FinanceWarehouseProps = FinanceWarehouse & Models.Document;
