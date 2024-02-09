@@ -241,9 +241,7 @@ export type FinanceRequest = {
   awardAcceptanceDate: string;
   supplierId: string;
   supplier: FinanceSupplierProps;
-  purchaseOrderId: string;
-  purchaseOrderDate: string;
-  purchaseOrderLink: string;
+  allProductsReceived: boolean | null;
   tag: string[];
 };
 
