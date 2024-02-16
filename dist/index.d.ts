@@ -29,6 +29,7 @@ export * from "./minutesSinceMidnight";
 export * from "./omitValueFromObject";
 export * from "./parseOrBlank";
 export * from "./removeBlankValues";
+export * from "./removeLeftZero";
 export * from "./schedules";
 export * from "./setCookie";
 export * from "./splitDateRange";
