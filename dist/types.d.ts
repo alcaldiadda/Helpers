@@ -283,7 +283,6 @@ export type FinanceDeliveryItem = {
 };
 export type FinanceDelivery = {
     departmentIdFrom: string;
-    departmentFrom: DepartmentProps;
     departmentIdTo: string;
     departmentTo: DepartmentProps;
     request: FinanceDeliveryItem[];
