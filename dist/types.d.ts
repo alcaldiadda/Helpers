@@ -277,3 +277,15 @@ export type FinanceWarehouse = {
     note?: string;
 };
 export type FinanceWarehouseProps = FinanceWarehouse & Models.Document;
+export type FinanceDeliveryItem = {
+    requestId: string;
+    note?: string;
+};
+export type FinanceDelivery = {
+    departmentIdFrom: string;
+    departmentFrom: DepartmentProps;
+    departmentIdTo: string;
+    departmentTo: DepartmentProps;
+    request: FinanceDeliveryItem[];
+};
+export type FinanceDeliveryProps = FinanceDelivery & Models.Document;
