@@ -285,6 +285,7 @@ export type FinanceDelivery = {
     departmentIdFrom: string;
     departmentFrom: DepartmentProps;
     departmentIdTo: string;
+    quantity: number;
     request: FinanceDeliveryItem[];
     createdBy: ProfileProps;
 };
