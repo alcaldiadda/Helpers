@@ -278,7 +278,7 @@ export type FinanceWarehouse = {
 };
 export type FinanceWarehouseProps = FinanceWarehouse & Models.Document;
 export type FinanceDeliveryItem = {
-    requestId: string;
+    requestNumber: string;
     note?: string;
 };
 export type FinanceDelivery = {
