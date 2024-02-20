@@ -330,7 +330,7 @@ export type FinanceDelivery = {
   departmentFrom: DepartmentProps;
   departmentIdTo: string;
   quantity: number;
-  request: FinanceDeliveryItem[];
+  request: string;
   createdBy: ProfileProps;
 };
 
