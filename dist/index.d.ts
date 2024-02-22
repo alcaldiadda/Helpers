@@ -20,6 +20,7 @@ export * from "./getFirstWord";
 export * from "./Identification";
 export * from "./isDateLessThanOrEqualToday";
 export * from "./isInTime";
+export * from "./isObjectEqual";
 export * from "./isSameDate";
 export * from "./isStructurallyEqual";
 export * from "./isValidLetters";

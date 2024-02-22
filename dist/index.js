@@ -36,6 +36,7 @@ __exportStar(require("./getFirstWord"), exports);
 __exportStar(require("./Identification"), exports);
 __exportStar(require("./isDateLessThanOrEqualToday"), exports);
 __exportStar(require("./isInTime"), exports);
+__exportStar(require("./isObjectEqual"), exports);
 __exportStar(require("./isSameDate"), exports);
 __exportStar(require("./isStructurallyEqual"), exports);
 __exportStar(require("./isValidLetters"), exports);
