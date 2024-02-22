@@ -331,6 +331,7 @@ export type FinanceDelivery = {
   departmentIdTo: string;
   quantity: number;
   request: string;
+  requestIds: string;
   createdBy: ProfileProps;
 };
 
