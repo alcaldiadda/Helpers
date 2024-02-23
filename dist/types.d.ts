@@ -285,9 +285,7 @@ export type FinanceDelivery = {
     departmentIdFrom: string;
     departmentFrom: DepartmentProps;
     departmentIdTo: string;
-    quantity: number;
     request: string;
-    requestIds: string;
     createdBy: ProfileProps;
 };
 export type FinanceDeliveryProps = FinanceDelivery & Models.Document;
