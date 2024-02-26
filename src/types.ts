@@ -243,6 +243,7 @@ export type FinanceRequest = {
   supplier: FinanceSupplierProps;
   allProductsReceived: boolean | null;
   tag: string[];
+  financeTracking: FinanceTrackingProps;
 };
 
 export type FinanceRequestProps = FinanceRequest & Models.Document;
