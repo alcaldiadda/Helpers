@@ -263,7 +263,7 @@ export type FinanceReport = {
 export type FinanceReportProps = FinanceReport & Models.Document;
 export type FinanceAttachment = {
     requestId: string;
-    type: string;
+    type: string[];
     note?: string;
     link: string;
 };
