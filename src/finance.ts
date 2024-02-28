@@ -17,6 +17,7 @@ export const documentState = [
 ];
 
 export const documentAttachmentTypes = [
+  { value: "FICHA_TECNICA", label: "Ficha Técnica" },
   { value: "CONTRATO", label: "Contrato" },
   { value: "DECRETO_ALCALDICIO", label: "Decreto Alcaldicio" },
   { value: "COTIZACIÓN", label: "Cotización" },
