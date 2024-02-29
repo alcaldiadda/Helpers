@@ -16,6 +16,7 @@ export const banks = [
   { $id: "15", name: "BANCO CONSORCIO (ex BANCO MONEX)" },
   { $id: "16", name: "BANCO PENTA" },
   { $id: "17", name: "BANCO PARIS" },
+  { $id: "18", name: "BANCO ESTADO" },
 ];
 
 export const accountTypes = [
