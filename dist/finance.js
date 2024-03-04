@@ -18,6 +18,9 @@ exports.documentState = [
     { label: "Anulado", value: "ANULADO" },
 ];
 exports.documentAttachmentTypes = [
+    { value: "SOLICITUD", label: "Solicitud" },
+    { value: "MEMORANDUM", label: "Memorándum" },
+    { value: "CURRICULUM", label: "Currículum" },
     { value: "FICHA_TECNICA", label: "Ficha Técnica" },
     { value: "CONTRATO", label: "Contrato" },
     { value: "DECRETO_ALCALDICIO", label: "Decreto Alcaldicio" },
