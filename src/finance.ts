@@ -53,3 +53,10 @@ export const purchaseType = [
   { value: "LICITACION", label: "Licitación" },
   { value: "TRATO_DIRECTO", label: "Trato Directo" },
 ];
+
+export const documentRequestType = [
+  { label: "Gestión Interna", value: "GESTION_INTERNA" },
+  { label: "Fondo de Terceros", value: "FONDO_TERCERO" },
+  { label: "Proyectos e Inversiones", value: "PROYECTO_INVERSIONES" },
+  { label: "Mideplan", value: "MIDEPLAN" },
+];

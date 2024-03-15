@@ -14,3 +14,7 @@ export declare const purchaseType: {
     value: string;
     label: string;
 }[];
+export declare const documentRequestType: {
+    label: string;
+    value: string;
+}[];

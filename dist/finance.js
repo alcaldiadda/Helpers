@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.purchaseType = exports.documentAttachmentTypes = exports.documentState = exports.documentTypes = void 0;
+exports.documentRequestType = exports.purchaseType = exports.documentAttachmentTypes = exports.documentState = exports.documentTypes = void 0;
 exports.documentTypes = [
     { value: "ORDEN_COMPRA", label: "Orden de Compra" },
     { value: "GUIA_DESPACHO", label: "Guía de Despacho" },
@@ -52,4 +52,10 @@ exports.purchaseType = [
     { value: "COMPRA_AGIL", label: "Compra Ágil" },
     { value: "LICITACION", label: "Licitación" },
     { value: "TRATO_DIRECTO", label: "Trato Directo" },
+];
+exports.documentRequestType = [
+    { label: "Gestión Interna", value: "GESTION_INTERNA" },
+    { label: "Fondo de Terceros", value: "FONDO_TERCERO" },
+    { label: "Proyectos e Inversiones", value: "PROYECTO_INVERSIONES" },
+    { label: "Mideplan", value: "MIDEPLAN" },
 ];
