@@ -10,3 +10,7 @@ export declare const documentAttachmentTypes: {
     value: string;
     label: string;
 }[];
+export declare const purchaseType: {
+    value: string;
+    label: string;
+}[];

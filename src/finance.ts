@@ -47,3 +47,9 @@ export const documentAttachmentTypes = [
     label: "Certificado de Estudios",
   },
 ];
+
+export const purchaseType = [
+  { value: "COMPRA_AGIL", label: "Compra Ágil" },
+  { value: "LICITACION", label: "Licitación" },
+  { value: "TRATO_DIRECTO", label: "Trato Directo" },
+];
