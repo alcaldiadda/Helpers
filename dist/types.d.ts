@@ -290,3 +290,21 @@ export type FinanceDelivery = {
     createdBy: ProfileProps;
 };
 export type FinanceDeliveryProps = FinanceDelivery & Models.Document;
+export type FinanceWarehousePurchaseOrder = {
+    purchaseOrderId: string;
+    purchaseOrderNumber: string;
+    active: boolean;
+    items: FinancePurchaseOrderItemProps[];
+};
+export type FinanceWarehousePurchaseOrderProps = FinanceWarehousePurchaseOrder & Models.Document;
+export type FinancePurchaseOrderItem = {
+    buyerDescription: string;
+    sellerDescription?: string;
+    location?: string;
+    purchaseOrder: FinanceWarehousePurchaseOrderProps;
+    quantityRequested: number;
+    quantityReceived?: number;
+    unitRequested?: string;
+    unitReceived?: string;
+};
+export type FinancePurchaseOrderItemProps = FinancePurchaseOrderItem & Models.Document;
