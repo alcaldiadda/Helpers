@@ -353,9 +353,21 @@ export type FinancePurchaseOrderItem = {
   purchaseOrder: FinanceWarehousePurchaseOrderProps;
   quantityRequested: number;
   quantityReceived?: number;
+  quantityRemain: number;
   unitRequested?: string;
   unitReceived?: string;
 };
 
 export type FinancePurchaseOrderItemProps = FinancePurchaseOrderItem &
+  Models.Document;
+
+export type FinanceWarehouseDelivered = {
+  requestId: string;
+  item: FinancePurchaseOrderItemProps[];
+  itemQuantity: string[];
+  from: string;
+  to: string;
+};
+
+export type FinanceWarehouseDeliveredProps = FinanceWarehouseDelivered &
   Models.Document;
