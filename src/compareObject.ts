@@ -1,4 +1,4 @@
-type Difference = {
+export type Difference = {
   add: Array<Record<string, any>>;
   mod: Array<Record<string, [any, any]>>;
   del: Array<Record<string, any>>;
