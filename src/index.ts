@@ -18,6 +18,7 @@ export * from "./getSchedules";
 export * from "./groupItems";
 export * from "./getFirstWord";
 export * from "./Identification";
+export * from "./extractKeys";
 export * from "./isArrayEqual";
 export * from "./isDateLessThanOrEqualToday";
 export * from "./isInTime";
