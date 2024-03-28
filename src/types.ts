@@ -352,7 +352,7 @@ export type FinancePurchaseOrderItem = {
   location?: string;
   purchaseOrder: FinanceWarehousePurchaseOrderProps;
   quantityRequested: number;
-  quantityReceived?: number;
+  quantityReceived: number;
   quantityDelivered: number;
   unitRequested?: string;
   unitReceived?: string;
