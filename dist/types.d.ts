@@ -304,7 +304,7 @@ export type FinancePurchaseOrderItem = {
     purchaseOrder: FinanceWarehousePurchaseOrderProps;
     quantityRequested: number;
     quantityReceived?: number;
-    quantityRemain: number;
+    quantityDelivered: number;
     unitRequested?: string;
     unitReceived?: string;
 };
