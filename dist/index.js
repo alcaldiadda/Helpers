@@ -16,6 +16,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __exportStar(require("./banks"), exports);
 __exportStar(require("./calculateAge"), exports);
+__exportStar(require("./calculateColorsFromTime"), exports);
 __exportStar(require("./calculateOvertime"), exports);
 __exportStar(require("./calculatePeriod"), exports);
 __exportStar(require("./capitalize"), exports);
