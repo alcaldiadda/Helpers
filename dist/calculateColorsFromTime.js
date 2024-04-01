@@ -13,11 +13,16 @@ var calculateColorsFromTime = function (_a) {
     var currentDate = new Date();
     var differenceInDays = Math.floor((currentDate.getTime() - createdAt.getTime()) / (1000 * 60 * 60 * 24));
     for (var _i = 0, properties_1 = properties; _i < properties_1.length; _i++) {
-        var _b = properties_1[_i], validator = _b.validator, color = _b.color, processing = _b.processing;
+        var _b = properties_1[_i], validator = _b.validator, label = _b.label, color = _b.color, processing = _b.processing;
         if (validator(differenceInDays)) {
-            return { color: color, processing: !!processing, days: differenceInDays };
+            return { label: label, color: color, processing: !!processing, days: differenceInDays };
         }
     }
-    return { color: "gray", processing: false, days: differenceInDays };
+    return {
+        label: "Desconocido",
+        color: "gray",
+        processing: false,
+        days: differenceInDays,
+    };
 };
 exports.calculateColorsFromTime = calculateColorsFromTime;

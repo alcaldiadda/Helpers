@@ -2,10 +2,12 @@ export interface IndicatorProps {
     color: string;
     processing: boolean;
     days: number;
+    label: string;
 }
 export type ValidationProps = {
-    validator: (differenceInDays: number) => boolean;
     color: string;
+    label: string;
+    validator: (differenceInDays: number) => boolean;
     processing?: boolean;
 };
 export type CalculateColorsProps = {

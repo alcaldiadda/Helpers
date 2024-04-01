@@ -2,11 +2,13 @@ export interface IndicatorProps {
   color: string;
   processing: boolean;
   days: number;
+  label: string;
 }
 
 export type ValidationProps = {
-  validator: (differenceInDays: number) => boolean;
   color: string;
+  label: string;
+  validator: (differenceInDays: number) => boolean;
   processing?: boolean;
 };
 
@@ -31,11 +33,16 @@ export const calculateColorsFromTime = ({
     (currentDate.getTime() - createdAt.getTime()) / (1000 * 60 * 60 * 24)
   );
 
-  for (const { validator, color, processing } of properties) {
+  for (const { validator, label, color, processing } of properties) {
     if (validator(differenceInDays)) {
-      return { color, processing: !!processing, days: differenceInDays };
+      return { label, color, processing: !!processing, days: differenceInDays };
     }
   }
 
-  return { color: "gray", processing: false, days: differenceInDays };
+  return {
+    label: "Desconocido",
+    color: "gray",
+    processing: false,
+    days: differenceInDays,
+  };
 };
