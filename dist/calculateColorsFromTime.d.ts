@@ -7,7 +7,8 @@ export interface IndicatorProps {
 export type ValidationProps = {
     color: string;
     label: string;
-    validator: (differenceInDays: number) => boolean;
+    validator: (differenceInDays: number, disabled?: boolean) => boolean;
+    disabled?: boolean;
     processing?: boolean;
 };
 export type CalculateColorsProps = {

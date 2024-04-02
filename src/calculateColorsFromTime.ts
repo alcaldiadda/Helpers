@@ -8,7 +8,8 @@ export interface IndicatorProps {
 export type ValidationProps = {
   color: string;
   label: string;
-  validator: (differenceInDays: number) => boolean;
+  validator: (differenceInDays: number, disabled?: boolean) => boolean;
+  disabled?: boolean;
   processing?: boolean;
 };
 
@@ -33,8 +34,8 @@ export const calculateColorsFromTime = ({
     (currentDate.getTime() - createdAt.getTime()) / (1000 * 60 * 60 * 24)
   );
 
-  for (const { validator, label, color, processing } of properties) {
-    if (validator(differenceInDays)) {
+  for (const { validator, disabled, label, color, processing } of properties) {
+    if (validator(differenceInDays, disabled)) {
       return { label, color, processing: !!processing, days: differenceInDays };
     }
   }
