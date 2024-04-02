@@ -8,12 +8,12 @@ exports.calculateColorsFromTime = void 0;
  * @returns {IndicatorProps} - An object representing the color indicator along with processing status and days difference.
  */
 var calculateColorsFromTime = function (_a) {
-    var dateFromString = _a.dateFromString, properties = _a.properties;
+    var dateFromString = _a.dateFromString, properties = _a.properties, disabled = _a.disabled;
     var createdAt = new Date(dateFromString);
     var currentDate = new Date();
     var differenceInDays = Math.floor((currentDate.getTime() - createdAt.getTime()) / (1000 * 60 * 60 * 24));
     for (var _i = 0, properties_1 = properties; _i < properties_1.length; _i++) {
-        var _b = properties_1[_i], validator = _b.validator, disabled = _b.disabled, label = _b.label, color = _b.color, processing = _b.processing;
+        var _b = properties_1[_i], validator = _b.validator, label = _b.label, color = _b.color, processing = _b.processing;
         if (validator(differenceInDays, disabled)) {
             return { label: label, color: color, processing: !!processing, days: differenceInDays };
         }

@@ -8,12 +8,12 @@ export type ValidationProps = {
     color: string;
     label: string;
     validator: (differenceInDays: number, disabled?: boolean) => boolean;
-    disabled?: boolean;
     processing?: boolean;
 };
 export type CalculateColorsProps = {
     dateFromString: string;
     properties: ValidationProps[];
+    disabled?: boolean;
 };
 /**
  * Calculates the color indicator based on the provided date and validation properties.
@@ -21,4 +21,4 @@ export type CalculateColorsProps = {
  * @param {ValidationProps[]} properties - An array of validation properties containing validators and corresponding colors.
  * @returns {IndicatorProps} - An object representing the color indicator along with processing status and days difference.
  */
-export declare const calculateColorsFromTime: ({ dateFromString, properties, }: CalculateColorsProps) => IndicatorProps;
+export declare const calculateColorsFromTime: ({ dateFromString, properties, disabled, }: CalculateColorsProps) => IndicatorProps;
