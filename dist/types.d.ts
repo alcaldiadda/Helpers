@@ -195,6 +195,11 @@ export type TimeToSubtract = {
     minutes: number;
 };
 /** FINANCE */
+export declare enum RequestStatus {
+    PROCESSING = "PROCESSING",
+    NULLED = "NULLED",
+    FINISHED = "FINISHED"
+}
 export type FinanceRequest = {
     requestNumber: string;
     departmentId: string;
@@ -215,6 +220,8 @@ export type FinanceRequest = {
     allProductsReceived: boolean | null;
     tag: string[];
     financeTracking: FinanceTrackingProps;
+    status: RequestStatus;
+    program: string;
 };
 export type FinanceRequestProps = FinanceRequest & Models.Document;
 export type FinanceTracking = {
