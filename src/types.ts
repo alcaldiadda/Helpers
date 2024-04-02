@@ -250,7 +250,7 @@ export type FinanceRequest = {
   allProductsReceived: boolean | null;
   tag: string[];
   financeTracking: FinanceTrackingProps;
-  status: RequestStatus;
+  status?: RequestStatus;
   program?: string;
 };
 
