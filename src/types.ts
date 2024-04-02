@@ -251,7 +251,7 @@ export type FinanceRequest = {
   tag: string[];
   financeTracking: FinanceTrackingProps;
   status?: RequestStatus;
-  program?: string;
+  program?: FinanceProgramProps;
 };
 
 export type FinanceRequestProps = FinanceRequest & Models.Document;
@@ -379,3 +379,9 @@ export type FinanceWarehouseDelivered = {
 
 export type FinanceWarehouseDeliveredProps = FinanceWarehouseDelivered &
   Models.Document;
+
+export type FinanceProgram = {
+  name: string;
+};
+
+export type FinanceProgramProps = FinanceProgram & Models.Document;
