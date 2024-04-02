@@ -252,6 +252,7 @@ export type FinanceRequest = {
   financeTracking: FinanceTrackingProps;
   status?: RequestStatus;
   program?: FinanceProgramProps;
+  programId?: string;
 };
 
 export type FinanceRequestProps = FinanceRequest & Models.Document;
