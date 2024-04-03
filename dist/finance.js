@@ -28,7 +28,7 @@ exports.documentAttachmentTypes = [
     { value: "CARTA", label: "Carta" },
     { value: "BOLETA", label: "Boleta" },
     {
-        value: "CERTIFICADO_INGRESO_ADMINISTRACION_PUBLCA",
+        value: "CERT_INGRESO_ADM_PUBLICA",
         label: "Certificado de Ingreso a la Administración Pública",
     },
     {
