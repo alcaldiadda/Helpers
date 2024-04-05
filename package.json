@@ -1,6 +1,6 @@
 {
   "name": "helpers",
-  "version": "0.19.9",
+  "version": "0.19.10",
   "description": "Funciones para validar y realizar diferentes acciones en la intranet municipal",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
