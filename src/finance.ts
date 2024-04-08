@@ -53,6 +53,17 @@ export const purchaseType = [
   { value: "COMPRA_AGIL", label: "Compra Ágil" },
   { value: "LICITACION", label: "Licitación" },
   { value: "TRATO_DIRECTO", label: "Trato Directo" },
+  { value: "CONVENIO_MARCO", label: "Convenio Marco" },
+  { value: "MICROCOMPRA", label: "Microcompra" },
+  { value: "COMPRA_COORDINADA", label: "Compra Coordinada" },
+  {
+    value: "TRATO_DIRECTO_EMERGENCIA",
+    label: "Trato directo por emergencia, urgencia e imprevisto",
+  },
+  {
+    value: "TRATO_DIRECTO_PROVEEDOR_UNICO",
+    label: "Trato directo por emergencia, urgencia e imprevisto",
+  },
 ];
 
 export const documentRequestType = [
