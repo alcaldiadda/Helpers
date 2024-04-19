@@ -20,6 +20,7 @@ exports.documentState = [
 exports.documentAttachmentTypes = [
     { value: "SOLICITUD", label: "Solicitud" },
     { value: "MEMORANDUM", label: "Memorándum" },
+    { value: "ORDINARIO", label: "Ordinario" },
     { value: "CURRICULUM", label: "Currículum" },
     { value: "FICHA_TECNICA", label: "Ficha Técnica" },
     { value: "CONTRATO", label: "Contrato" },
@@ -28,6 +29,10 @@ exports.documentAttachmentTypes = [
     { value: "CARTA", label: "Carta" },
     { value: "BOLETA", label: "Boleta" },
     { value: "EMAIL", label: "Correo Electrónico" },
+    {
+        value: "CERT_DISP_PRESUPUESTARIA",
+        label: "Certificado de Disponibilidad Presupuestaria",
+    },
     {
         value: "CERT_INGRESO_ADM_PUBLICA",
         label: "Certificado de Ingreso a la Administración Pública",
