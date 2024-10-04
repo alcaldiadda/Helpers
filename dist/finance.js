@@ -12,6 +12,8 @@ exports.documentTypes = [
     { value: "DECRETO_ALCALDICIO", label: "Decreto Alcaldicio" },
     { value: "RETIRO", label: "Retiro de Dinero" },
     { value: "COMPROBANTE", label: "Comprobante" },
+    { value: "NOTA_CREDITO", label: "Nota de Crédito" },
+    { value: "NOTA_DEBITO", label: "Nota de Debito" },
 ];
 exports.documentState = [
     { label: "Activo", value: "ACTIVO" },
