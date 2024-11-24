@@ -14,7 +14,7 @@ var obtenerDiaSemana = function (fecha) {
         "miercoles",
         "jueves",
         "viernes",
-        "sábado",
+        "sabado",
     ];
     return diasSemana[new Date(fecha + "T00:00:00Z").getUTCDay()];
 };
