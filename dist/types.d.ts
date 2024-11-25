@@ -399,4 +399,20 @@ export type HistorialMarcacion = {
     id_usuario: string;
     marcaciones: Marcacion[];
 };
+export type RegistraMarcacion = {
+    pid?: string;
+    $id?: string;
+    fecha_string: string;
+    ip_maquina: string;
+};
+export type ActualizaMarcacion = {
+    pid?: string;
+    $id?: string;
+    jwt: string;
+    marcador: {
+        $id: string;
+        fecha_string: string;
+        tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
+    };
+};
 export {};
