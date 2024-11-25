@@ -1,4 +1,5 @@
 import { Models } from "./models";
+import { TipoMarcacion } from "./TipoMarcacion";
 /**
  * DATABASE TYPES
  */
@@ -329,3 +330,73 @@ export type FinanceProgram = {
     name: string;
 };
 export type FinanceProgramProps = FinanceProgram & Models.Document;
+/**
+ * Recursos Humanos
+ */
+export type DiaSemana = "lunes" | "martes" | "miercoles" | "jueves" | "viernes" | "sabado" | "domingo";
+type MarcacionBase = {
+    id_usuario: string;
+    fecha: string;
+    hora: string;
+    tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion] | null;
+    creado_el: string;
+    actualizado_el: string;
+    agregado_por: string | null;
+    ip_maquina: string;
+};
+export type Marcacion = Pick<MarcacionBase, "id_usuario" | "fecha" | "hora" | "tipo">;
+export type MarcacionProps = Omit<MarcacionBase, "hora"> & Models.Document;
+/**
+ * Tipo que define la estructura de retorno de la función determinarTipoMarcacion
+ * @typedef {Object} SalidaTipoMarcacion
+ * @property {TipoMarcacion} tipo - El tipo de marcación determinado
+ * @property {string} mensaje - Mensaje descriptivo del resultado
+ */
+export type SalidaTipoMarcacion = {
+    tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
+    mensaje: string;
+};
+export type JornadaBase = {
+    $id?: string;
+    $createdAt?: string;
+    $updatedAt?: string;
+    entrada: string;
+    salida: string;
+    colacion_inicio?: string;
+    colacion_fin?: string;
+};
+export type JornadaRegular = JornadaBase & {
+    tipo: "regular";
+    dia_semana: DiaSemana;
+    fecha: null;
+    id_usuario: null;
+};
+export type JornadaEspecial = JornadaBase & {
+    tipo: "especial";
+    dia_semana: null;
+    fecha: string;
+    id_usuario: null;
+};
+export type JornadaUsuario = JornadaBase & {
+    tipo: "usuario";
+    id_usuario: string;
+    dia_semana?: DiaSemana;
+    fecha?: string;
+};
+export type Feriado = {
+    $id?: string;
+    $createdAt?: string;
+    $updatedAt?: string;
+    fecha: string;
+    descripcion?: string;
+};
+export type Jornada = JornadaRegular | JornadaEspecial | JornadaUsuario;
+export type JornadaTrabajo = {
+    jornadas: Jornada[];
+    feriados: Feriado[];
+};
+export type HistorialMarcacion = {
+    id_usuario: string;
+    marcaciones: Marcacion[];
+};
+export {};
