@@ -1,4 +1,5 @@
 import { Models } from "./models";
+import { TipoMarcacion } from "./TipoMarcacion";
 
 /**
  * DATABASE TYPES
@@ -386,3 +387,126 @@ export type FinanceProgram = {
 };
 
 export type FinanceProgramProps = FinanceProgram & Models.Document;
+
+/**
+ * Recursos Humanos
+ */
+
+export type DiaSemana =
+  | "lunes"
+  | "martes"
+  | "miercoles"
+  | "jueves"
+  | "viernes"
+  | "sabado"
+  | "domingo";
+
+// Tipos para la jornada de trabajo y marcaciones
+type MarcacionBase = {
+  id_usuario: string;
+  fecha: string;
+  hora: string;
+  tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion] | null;
+  creado_el: string;
+  actualizado_el: string;
+  agregado_por: string | null;
+  ip_maquina: string;
+};
+
+// Tipos para la estructura de la marcación
+export type Marcacion = Pick<
+  MarcacionBase,
+  "id_usuario" | "fecha" | "hora" | "tipo"
+>;
+
+// Tipos para la estructura de la marcación con propiedades de Appwrite
+export type MarcacionProps = Omit<MarcacionBase, "hora"> & Models.Document;
+
+/**
+ * Tipo que define la estructura de retorno de la función determinarTipoMarcacion
+ * @typedef {Object} SalidaTipoMarcacion
+ * @property {TipoMarcacion} tipo - El tipo de marcación determinado
+ * @property {string} mensaje - Mensaje descriptivo del resultado
+ */
+export type SalidaTipoMarcacion = {
+  tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
+  mensaje: string;
+};
+
+// Tipos base para las jornadas
+export type JornadaBase = {
+  $id?: string;
+  $createdAt?: string;
+  $updatedAt?: string;
+  entrada: string; // "HH:mm"
+  salida: string; // "HH:mm"
+  colacion_inicio?: string; // "HH:mm"
+  colacion_fin?: string; // "HH:mm"
+};
+
+// Jornada regular (por día de semana)
+export type JornadaRegular = JornadaBase & {
+  tipo: "regular";
+  dia_semana: DiaSemana;
+  fecha: null;
+  id_usuario: null;
+};
+
+// Jornada especial (por fecha específica)
+export type JornadaEspecial = JornadaBase & {
+  tipo: "especial";
+  dia_semana: null;
+  fecha: string; // "YYYY-MM-DD"
+  id_usuario: null;
+};
+
+// Jornada por usuario
+export type JornadaUsuario = JornadaBase & {
+  tipo: "usuario";
+  id_usuario: string;
+  dia_semana?: DiaSemana; // Para jornadas regulares del usuario
+  fecha?: string; // Para fechas específicas del usuario
+};
+
+// Feriado
+export type Feriado = {
+  $id?: string;
+  $createdAt?: string;
+  $updatedAt?: string;
+  fecha: string; // "YYYY-MM-DD"
+  descripcion?: string;
+};
+
+// Tipo unión para todas las jornadas
+export type Jornada = JornadaRegular | JornadaEspecial | JornadaUsuario;
+
+// Tipo principal JornadaTrabajo actualizado
+export type JornadaTrabajo = {
+  jornadas: Jornada[];
+  feriados: Feriado[];
+};
+
+// Tipos para el historial de marcaciones
+export type HistorialMarcacion = {
+  id_usuario: string;
+  marcaciones: Marcacion[]; // Lista de marcaciones ordenadas cronológicamente por el usuario
+};
+
+// Tipos para la solicitud de registro de marcación
+export type RegistraMarcacion = {
+  pid?: string;
+  $id?: string;
+  fecha_string: string;
+  ip_maquina: string;
+};
+
+export type ActualizaMarcacion = {
+  pid?: string;
+  $id?: string;
+  jwt: string;
+  marcador: {
+    $id: string;
+    fecha_string: string;
+    tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
+  };
+};
