@@ -408,7 +408,7 @@ export type RegistraMarcacion = {
 export type ActualizaMarcacion = {
     pid?: string;
     $id?: string;
-    jwt: string;
+    session: string;
     marcador: {
         $id: string;
         tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
