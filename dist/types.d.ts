@@ -411,9 +411,7 @@ export type ActualizaMarcacion = {
     jwt: string;
     marcador: {
         $id: string;
-        fecha_string?: string;
         tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
-        ip_maquina?: string;
     };
 };
 export {};
