@@ -403,20 +403,21 @@ export type DiaSemana =
 
 // Tipos para la jornada de trabajo y marcaciones
 type MarcacionBase = {
+  ip_maquina: string;
   id_usuario: string;
+  id_jornada: string;
   fecha: string;
   hora: string;
   tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion] | null;
   creado_el: string;
   actualizado_el: string;
   agregado_por: string | null;
-  ip_maquina: string;
 };
 
 // Tipos para la estructura de la marcación
 export type Marcacion = Pick<
   MarcacionBase,
-  "id_usuario" | "fecha" | "hora" | "tipo"
+  "id_usuario" | "id_jornada" | "fecha" | "hora" | "tipo"
 >;
 
 // Tipos para la estructura de la marcación con propiedades de Appwrite
