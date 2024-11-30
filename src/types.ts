@@ -509,3 +509,8 @@ export type ActualizaMarcacion = {
     tipo: (typeof TipoMarcacion)[keyof typeof TipoMarcacion];
   };
 };
+
+export type ResultadoTiempo = {
+  horas: number;
+  minutos: number;
+};
