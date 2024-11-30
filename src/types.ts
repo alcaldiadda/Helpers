@@ -501,7 +501,9 @@ export type HistorialMarcacion = {
 
 // Tipos para la solicitud de registro de marcación
 export type RegistraMarcacion = {
-  id_usuario_origen: string;
+  id_usuario_origen?: string;
+  $id?: string;
+  pid?: string;
   fecha_string: string;
   ip_maquina: string;
 };

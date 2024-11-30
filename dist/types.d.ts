@@ -403,7 +403,9 @@ export type HistorialMarcacion = {
     marcaciones: Marcacion[];
 };
 export type RegistraMarcacion = {
-    id_usuario_origen: string;
+    id_usuario_origen?: string;
+    $id?: string;
+    pid?: string;
     fecha_string: string;
     ip_maquina: string;
 };
