@@ -336,8 +336,8 @@ export type FinanceProgramProps = FinanceProgram & Models.Document;
 export type DiaSemana = "lunes" | "martes" | "miercoles" | "jueves" | "viernes" | "sabado" | "domingo";
 type MarcacionBase = {
     ip_maquina: string;
-    id_usuario_origen: string;
-    id_usuario: string;
+    id_usuario_origen?: string;
+    id_usuario?: string;
     id_jornada: string;
     fecha: string;
     hora: string;
@@ -403,8 +403,7 @@ export type HistorialMarcacion = {
     marcaciones: Marcacion[];
 };
 export type RegistraMarcacion = {
-    pid?: string;
-    $id?: string;
+    id_usuario_origen: string;
     fecha_string: string;
     ip_maquina: string;
 };
