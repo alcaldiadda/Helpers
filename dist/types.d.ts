@@ -394,6 +394,7 @@ export type Feriado = {
     descripcion?: string;
 };
 export type Jornada = JornadaRegular | JornadaEspecial | JornadaUsuario;
+export type JornadaProps = Models.Document & Jornada;
 export type JornadaTrabajo = {
     jornadas: Jornada[];
     feriados: Feriado[];

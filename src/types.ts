@@ -486,6 +486,7 @@ export type Feriado = {
 
 // Tipo unión para todas las jornadas
 export type Jornada = JornadaRegular | JornadaEspecial | JornadaUsuario;
+export type JornadaProps = Models.Document & Jornada;
 
 // Tipo principal JornadaTrabajo actualizado
 export type JornadaTrabajo = {
