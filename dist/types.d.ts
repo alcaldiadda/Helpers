@@ -336,6 +336,7 @@ export type FinanceProgramProps = FinanceProgram & Models.Document;
 export type DiaSemana = "lunes" | "martes" | "miercoles" | "jueves" | "viernes" | "sabado" | "domingo";
 type MarcacionBase = {
     ip_maquina: string;
+    id_usuario_origen: string;
     id_usuario: string;
     id_jornada: string;
     fecha: string;
@@ -345,6 +346,7 @@ type MarcacionBase = {
     actualizado_el: string;
     agregado_por: string | null;
 };
+export type MarcacionBruta = Pick<MarcacionBase, "id_usuario_origen" | "id_usuario" | "fecha" | "ip_maquina">;
 export type Marcacion = Pick<MarcacionBase, "id_usuario" | "id_jornada" | "fecha" | "hora" | "tipo">;
 export type MarcacionProps = Omit<MarcacionBase, "hora"> & Models.Document;
 /**

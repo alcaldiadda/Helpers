@@ -54,6 +54,7 @@ __exportStar(require("./isValidPid"), exports);
 __exportStar(require("./isValidURL"), exports);
 __exportStar(require("./minutesSinceMidnight"), exports);
 __exportStar(require("./obtenerDiaSemana"), exports);
+__exportStar(require("./obtieneJornada"), exports);
 __exportStar(require("./omitValueFromObject"), exports);
 __exportStar(require("./parsearHora"), exports);
 __exportStar(require("./parseOrBlank"), exports);

@@ -404,6 +404,7 @@ export type DiaSemana =
 // Tipos para la jornada de trabajo y marcaciones
 type MarcacionBase = {
   ip_maquina: string;
+  id_usuario_origen: string; // id de usuario en el reloj
   id_usuario: string;
   id_jornada: string;
   fecha: string;
@@ -413,6 +414,11 @@ type MarcacionBase = {
   actualizado_el: string;
   agregado_por: string | null;
 };
+
+export type MarcacionBruta = Pick<
+  MarcacionBase,
+  "id_usuario_origen" | "id_usuario" | "fecha" | "ip_maquina"
+>;
 
 // Tipos para la estructura de la marcación
 export type Marcacion = Pick<

@@ -38,6 +38,7 @@ export * from "./isValidPid";
 export * from "./isValidURL";
 export * from "./minutesSinceMidnight";
 export * from "./obtenerDiaSemana";
+export * from "./obtieneJornada";
 export * from "./omitValueFromObject";
 export * from "./parsearHora";
 export * from "./parseOrBlank";
