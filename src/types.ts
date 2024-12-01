@@ -443,9 +443,9 @@ export type SalidaTipoMarcacion = {
 
 // Tipos base para las jornadas
 export type JornadaBase = {
-  $id?: string;
-  $createdAt?: string;
-  $updatedAt?: string;
+  $id: string;
+  $createdAt: string;
+  $updatedAt: string;
   entrada: string; // "HH:mm"
   salida: string; // "HH:mm"
   colacion_inicio?: string; // "HH:mm"

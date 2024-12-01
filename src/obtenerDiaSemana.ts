@@ -4,6 +4,10 @@
  * @returns {string} - Retorna el día de la semana en formato "domingo", "lunes", etc.
  */
 export const obtenerDiaSemana = (fecha: string): string => {
+  const _fecha = new Date(fecha);
+
+  _fecha.setHours(0);
+
   const diasSemana = [
     "domingo",
     "lunes",
@@ -13,5 +17,5 @@ export const obtenerDiaSemana = (fecha: string): string => {
     "viernes",
     "sabado",
   ];
-  return diasSemana[new Date(fecha + "T00:00:00Z").getUTCDay()];
+  return diasSemana[_fecha.getUTCDay()];
 };

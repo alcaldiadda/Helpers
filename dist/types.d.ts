@@ -360,9 +360,9 @@ export type SalidaTipoMarcacion = {
     mensaje: string;
 };
 export type JornadaBase = {
-    $id?: string;
-    $createdAt?: string;
-    $updatedAt?: string;
+    $id: string;
+    $createdAt: string;
+    $updatedAt: string;
     entrada: string;
     salida: string;
     colacion_inicio?: string;

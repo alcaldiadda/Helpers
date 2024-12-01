@@ -7,6 +7,8 @@ exports.obtenerDiaSemana = void 0;
  * @returns {string} - Retorna el día de la semana en formato "domingo", "lunes", etc.
  */
 var obtenerDiaSemana = function (fecha) {
+    var _fecha = new Date(fecha);
+    _fecha.setHours(0);
     var diasSemana = [
         "domingo",
         "lunes",
@@ -16,6 +18,6 @@ var obtenerDiaSemana = function (fecha) {
         "viernes",
         "sabado",
     ];
-    return diasSemana[new Date(fecha + "T00:00:00Z").getUTCDay()];
+    return diasSemana[_fecha.getUTCDay()];
 };
 exports.obtenerDiaSemana = obtenerDiaSemana;
