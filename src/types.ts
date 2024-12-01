@@ -427,7 +427,8 @@ export type Marcacion = Pick<
 >;
 
 // Tipos para la estructura de la marcación con propiedades de Appwrite
-export type MarcacionProps = Omit<MarcacionBase, "hora"> & Models.Document;
+export type MarcacionProps = Omit<MarcacionBase, "hora" | "id_usuario_origen"> &
+  Models.Document;
 
 /**
  * Tipo que define la estructura de retorno de la función determinarTipoMarcacion
@@ -492,12 +493,6 @@ export type JornadaProps = Models.Document & Jornada;
 export type JornadaTrabajo = {
   jornadas: Jornada[];
   feriados: Feriado[];
-};
-
-// Tipos para el historial de marcaciones
-export type HistorialMarcacion = {
-  id_usuario: string;
-  marcaciones: Marcacion[]; // Lista de marcaciones ordenadas cronológicamente por el usuario
 };
 
 // Tipos para la solicitud de registro de marcación

@@ -348,7 +348,7 @@ type MarcacionBase = {
 };
 export type MarcacionBruta = Pick<MarcacionBase, "id_usuario_origen" | "id_usuario" | "fecha" | "ip_maquina">;
 export type Marcacion = Pick<MarcacionBase, "id_usuario" | "id_jornada" | "fecha" | "hora" | "tipo">;
-export type MarcacionProps = Omit<MarcacionBase, "hora"> & Models.Document;
+export type MarcacionProps = Omit<MarcacionBase, "hora" | "id_usuario_origen"> & Models.Document;
 /**
  * Tipo que define la estructura de retorno de la función determinarTipoMarcacion
  * @typedef {Object} SalidaTipoMarcacion
@@ -398,10 +398,6 @@ export type JornadaProps = Models.Document & Jornada;
 export type JornadaTrabajo = {
     jornadas: Jornada[];
     feriados: Feriado[];
-};
-export type HistorialMarcacion = {
-    id_usuario: string;
-    marcaciones: Marcacion[];
 };
 export type RegistraMarcacion = {
     id_usuario_origen?: string;
