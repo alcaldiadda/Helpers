@@ -28,6 +28,7 @@ __exportStar(require("./convertirHorasAMinutos"), exports);
 __exportStar(require("./delCookie"), exports);
 __exportStar(require("./diferenciaTiempo"), exports);
 __exportStar(require("./diffBetweenDates"), exports);
+__exportStar(require("./dividirFecha"), exports);
 __exportStar(require("./emailValidation"), exports);
 __exportStar(require("./esFeriado"), exports);
 __exportStar(require("./esPrimeraMarcacionJornada"), exports);

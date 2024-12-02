@@ -12,6 +12,7 @@ export * from "./convertirHorasAMinutos";
 export * from "./delCookie";
 export * from "./diferenciaTiempo";
 export * from "./diffBetweenDates";
+export * from "./dividirFecha";
 export * from "./emailValidation";
 export * from "./esFeriado";
 export * from "./esPrimeraMarcacionJornada";
