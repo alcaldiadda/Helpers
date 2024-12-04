@@ -1,5 +1,5 @@
 import { obtenerDiaSemana } from "./obtenerDiaSemana";
-import { Jornada, MarcacionBruta } from "./types";
+import { JornadaProps, MarcacionBruta } from "./types";
 
 /**
  * Obtiene el horario aplicable según la jerarquía:
@@ -13,7 +13,7 @@ import { Jornada, MarcacionBruta } from "./types";
  */
 export const obtieneJornadaDesdeFecha = (
   marcacion: MarcacionBruta,
-  jornadas: Jornada[]
+  jornadas: JornadaProps[]
 ) => {
   const diaSemana = obtenerDiaSemana(marcacion.fecha).toLowerCase();
   return jornadas.find((jornada) => {
