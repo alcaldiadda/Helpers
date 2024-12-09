@@ -7,7 +7,7 @@ var luxon_1 = require("luxon");
  * @param tiempoString
  * @returns Objeto DateTime
  */
-function parsearHora(tiempoString) {
-    return luxon_1.DateTime.fromFormat(tiempoString, "HH:mm");
+function parsearHora(tiempoString, zonaHoraria) {
+    return luxon_1.DateTime.fromFormat(tiempoString, "HH:mm", { zone: zonaHoraria });
 }
 exports.parsearHora = parsearHora;

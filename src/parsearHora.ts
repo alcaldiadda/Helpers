@@ -5,6 +5,9 @@ import { DateTime } from "luxon";
  * @param tiempoString
  * @returns Objeto DateTime
  */
-export function parsearHora(tiempoString: string): DateTime {
-  return DateTime.fromFormat(tiempoString, "HH:mm");
+export function parsearHora(
+  tiempoString: string,
+  zonaHoraria?: string
+): DateTime {
+  return DateTime.fromFormat(tiempoString, "HH:mm", { zone: zonaHoraria });
 }
