@@ -1,5 +1,6 @@
 export * from "./agregarTiempo";
 export * from "./banks";
+export * from "./calcularIntervaloJornada";
 export * from "./calculateAge";
 export * from "./calculateColorsFromTime";
 export * from "./calculateOvertime";
