@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { Models } from "./models";
 import { TipoMarcacion } from "./TipoMarcacion";
 
@@ -517,4 +518,39 @@ export type ActualizaMarcacion = {
 export type ResultadoTiempo = {
   horas: number;
   minutos: number;
+};
+
+export type TipoAusencia =
+  | "LICENCIA_MEDICA"
+  | "FERIADO_LEGAL"
+  | "PERMISO_ADMINISTRATIVO"
+  | "PERMISO_ADMINISTRATIVO_SIN_GOCE";
+
+export type Ausencia = {
+  id: string;
+  usuarioId: string;
+  cantidad: number;
+  fechaInicio: Date;
+  fechaFin: Date;
+  tipo: TipoAusencia;
+  motivo: string;
+};
+
+export type JornadaDiaria = {
+  usuarioId: string;
+  fecha: string;
+  jornadas: JornadaProps | null;
+  horaEntrada: DateTime | null | undefined;
+  horaSalida: DateTime | null | undefined;
+  inicioColacion: DateTime | null | undefined;
+  finColacion: DateTime | null | undefined;
+  horasTrabajadas: ResultadoTiempo;
+  tiempoColacion: ResultadoTiempo;
+  atraso: ResultadoTiempo;
+  salidaAnticipada: ResultadoTiempo;
+  excesoColacion: ResultadoTiempo;
+  colacionNoDevuelta: ResultadoTiempo;
+  horasExtras25: ResultadoTiempo;
+  horasExtras50: ResultadoTiempo;
+  ausencia: Ausencia | null;
 };
