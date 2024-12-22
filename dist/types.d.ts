@@ -438,6 +438,7 @@ export type JornadaDiaria = {
     hora_salida: string | null | undefined;
     inicio_colacion: string | null | undefined;
     fin_colacion: string | null | undefined;
+    colacion_en_rango: boolean | null;
     horas_trabajadas: string;
     tiempo_colacion: string;
     atraso: string;
