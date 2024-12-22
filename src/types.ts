@@ -537,20 +537,22 @@ export type Ausencia = {
 };
 
 export type JornadaDiaria = {
-  usuarioId: string;
+  id_usuario: string;
   fecha: string;
-  jornadas: JornadaProps | null;
-  horaEntrada: DateTime | null | undefined;
-  horaSalida: DateTime | null | undefined;
-  inicioColacion: DateTime | null | undefined;
-  finColacion: DateTime | null | undefined;
-  horasTrabajadas: ResultadoTiempo;
-  tiempoColacion: ResultadoTiempo;
-  atraso: ResultadoTiempo;
-  salidaAnticipada: ResultadoTiempo;
-  excesoColacion: ResultadoTiempo;
-  colacionNoDevuelta: ResultadoTiempo;
-  horasExtras25: ResultadoTiempo;
-  horasExtras50: ResultadoTiempo;
-  ausencia: Ausencia | null;
+  id_jornada: string | null;
+  hora_entrada: string | null | undefined;
+  hora_salida: string | null | undefined;
+  inicio_colacion: string | null | undefined;
+  fin_colacion: string | null | undefined;
+  horas_trabajadas: string;
+  tiempo_colacion: string;
+  atraso: string;
+  salida_anticipada: string;
+  exceso_colacion: string;
+  colacion_no_devuelta: string;
+  horas_extras_25: string;
+  horas_extras_50: string;
+  ausencia: string | null;
 };
+
+export type JornadaDiariaProps = Models.Document & JornadaDiaria;
