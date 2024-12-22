@@ -1,6 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.esFeriado = void 0;
 /**
  * Función que determina si una fecha es feriado
  * @param {string} fecha - Fecha en formato "YYYY-MM-DD"
@@ -8,12 +6,11 @@ exports.esFeriado = void 0;
  * @returns {boolean} - Retorna true si la fecha es feriado, false en caso contrario
  */
 var esFeriado = function (fecha, feriados) {
-    var _a = fecha.split("-").map(Number), anio = _a[0], mes = _a[1], dia = _a[2];
-    var fechaObj = new Date(anio, mes - 1, dia);
+    var fechaObj = new Date(fecha);
     var diaSemana = fechaObj.getDay();
     var esFinDeSemana = diaSemana === 0 || diaSemana === 6; // 0 = Domingo, 6 = Sábado
     var fechaISO = fechaObj.toISOString().split("T")[0]; // Convierte a formato "aaa-mm-dd"
+    var esFeriado = Boolean(feriados === null || feriados === void 0 ? void 0 : feriados.includes(fechaISO));
     // Verifica si es fin de semana o si está en la lista de feriados
-    return esFinDeSemana || Boolean(feriados === null || feriados === void 0 ? void 0 : feriados.includes(fechaISO));
+    return esFinDeSemana || esFeriado;
 };
-exports.esFeriado = esFeriado;

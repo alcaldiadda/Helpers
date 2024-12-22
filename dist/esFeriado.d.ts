@@ -4,4 +4,4 @@
  * @param {string[]} [feriados] - Lista de feriados en formato "YYYY-MM-DD"
  * @returns {boolean} - Retorna true si la fecha es feriado, false en caso contrario
  */
-export declare const esFeriado: (fecha: string, feriados?: string[]) => boolean;
+declare const esFeriado: (fecha: string, feriados?: string[]) => boolean;
