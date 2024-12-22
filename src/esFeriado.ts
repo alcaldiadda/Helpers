@@ -4,7 +4,7 @@
  * @param {string[]} [feriados] - Lista de feriados en formato "YYYY-MM-DD"
  * @returns {boolean} - Retorna true si la fecha es feriado, false en caso contrario
  */
-const esFeriado = (fecha: string, feriados?: string[]) => {
+export const esFeriado = (fecha: string, feriados?: string[]) => {
   const fechaObj = new Date(fecha);
 
   const diaSemana = fechaObj.getDay();

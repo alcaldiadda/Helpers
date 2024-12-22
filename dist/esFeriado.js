@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.esFeriado = void 0;
 /**
  * Función que determina si una fecha es feriado
  * @param {string} fecha - Fecha en formato "YYYY-MM-DD"
@@ -14,3 +16,4 @@ var esFeriado = function (fecha, feriados) {
     // Verifica si es fin de semana o si está en la lista de feriados
     return esFinDeSemana || esFeriado;
 };
+exports.esFeriado = esFeriado;
