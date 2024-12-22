@@ -540,6 +540,7 @@ export type JornadaDiaria = {
   id_usuario: string;
   fecha: string;
   id_jornada: string | null;
+  jornada: JornadaProps | null;
   hora_entrada: string | null | undefined;
   hora_salida: string | null | undefined;
   inicio_colacion: string | null | undefined;
