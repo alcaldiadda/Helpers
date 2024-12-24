@@ -400,7 +400,7 @@ export type JornadaTrabajo = {
     feriados: Feriado[];
 };
 export type RegistraMarcacion = {
-    id_usuario_origen?: string;
+    dispositivo_id?: string;
     $id?: string;
     pid?: string;
     fecha_string: string;

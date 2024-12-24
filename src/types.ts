@@ -498,7 +498,7 @@ export type JornadaTrabajo = {
 
 // Tipos para la solicitud de registro de marcación
 export type RegistraMarcacion = {
-  id_usuario_origen?: string;
+  dispositivo_id?: string;
   $id?: string;
   pid?: string;
   fecha_string: string;
