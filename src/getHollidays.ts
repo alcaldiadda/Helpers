@@ -7,6 +7,10 @@ export interface HolidayResponseProps {
 }
 
 export const getHollidays = async (date: string, forceUpdate = false) => {
+  if (typeof window === "undefined") {
+    return;
+  }
+
   // check holidays
   const year = new Date(date).getFullYear();
   const folder = "./hollidays/";

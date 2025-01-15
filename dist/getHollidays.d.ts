@@ -5,4 +5,4 @@ export interface HolidayResponseProps {
     irrenunciable: "0" | "1";
     tipo: string;
 }
-export declare const getHollidays: (date: string, forceUpdate?: boolean) => Promise<HolidayResponseProps[]>;
+export declare const getHollidays: (date: string, forceUpdate?: boolean) => Promise<HolidayResponseProps[] | undefined>;
