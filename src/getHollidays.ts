@@ -7,7 +7,7 @@ export interface HolidayResponseProps {
 }
 
 export const getHollidays = async (date: string, forceUpdate = false) => {
-  if (typeof window === "undefined") {
+  if (typeof window !== "undefined") {
     return;
   }
 

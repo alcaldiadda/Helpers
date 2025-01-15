@@ -67,7 +67,7 @@ var getHollidays = function (date, forceUpdate) {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    if (typeof window === "undefined") {
+                    if (typeof window !== "undefined") {
                         return [2 /*return*/];
                     }
                     year = new Date(date).getFullYear();
