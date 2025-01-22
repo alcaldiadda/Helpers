@@ -12,6 +12,10 @@
     "build": "tsc",
     "test": "jest ./test"
   },
+  "exports": {
+    ".": "./dist/index.js",
+    "./getHollidays": "./dist/getHollidays.node.js"
+  },
   "files": [
     "dist"
   ],

@@ -19,5 +19,5 @@
     "declaration": true
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "src/**/*.node.ts"]
+  "exclude": ["node_modules", "dist"]
 }

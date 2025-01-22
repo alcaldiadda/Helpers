@@ -73,6 +73,3 @@ __exportStar(require("./summarizeKeyValues"), exports);
 __exportStar(require("./time"), exports);
 __exportStar(require("./TipoMarcacion"), exports);
 __exportStar(require("./types"), exports);
-if (typeof window === "undefined") {
-    Object.assign(exports, require("./getHollidays.node"));
-}
