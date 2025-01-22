@@ -26,7 +26,6 @@ export * from "./getObjectData";
 export * from "./getSchedules";
 export * from "./groupItems";
 export * from "./getFirstWord";
-export * from "./getHollidays";
 export * from "./Identification";
 export * from "./isArrayEqual";
 export * from "./isDateLessThanOrEqualToday";

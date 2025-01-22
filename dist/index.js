@@ -42,7 +42,6 @@ __exportStar(require("./getObjectData"), exports);
 __exportStar(require("./getSchedules"), exports);
 __exportStar(require("./groupItems"), exports);
 __exportStar(require("./getFirstWord"), exports);
-__exportStar(require("./getHollidays"), exports);
 __exportStar(require("./Identification"), exports);
 __exportStar(require("./isArrayEqual"), exports);
 __exportStar(require("./isDateLessThanOrEqualToday"), exports);
@@ -74,3 +73,6 @@ __exportStar(require("./summarizeKeyValues"), exports);
 __exportStar(require("./time"), exports);
 __exportStar(require("./TipoMarcacion"), exports);
 __exportStar(require("./types"), exports);
+if (typeof window === "undefined") {
+    Object.assign(exports, require("./getHollidays.node"));
+}

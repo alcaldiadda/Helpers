@@ -26,7 +26,6 @@ export * from "./getObjectData";
 export * from "./getSchedules";
 export * from "./groupItems";
 export * from "./getFirstWord";
-export * from "./getHollidays";
 export * from "./Identification";
 export * from "./isArrayEqual";
 export * from "./isDateLessThanOrEqualToday";
@@ -58,3 +57,7 @@ export * from "./summarizeKeyValues";
 export * from "./time";
 export * from "./TipoMarcacion";
 export * from "./types";
+
+if (typeof window === "undefined") {
+  Object.assign(exports, require("./getHollidays.node"));
+}
