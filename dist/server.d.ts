@@ -1,1 +1,1 @@
-export * from "./getHollidays";
+export * from "./getHollidays.node";
