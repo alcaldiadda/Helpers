@@ -1,19 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calcularIntervaloJornada = void 0;
-var luxon_1 = require("luxon");
 /**
  * Calcula los intervalos de tiempo de una jornada.
  * Una jornada termina a las 6:00 AM del día siguiente.
  *
- * @param {string} fecha_string - Fecha en formato string.
- * @param {string} zona_horaria - Zona horaria a usar.
+ * @param {DateTime} fecha - Objeto DateTime de luxon.
  * @returns {Object} - Intervalos de tiempo { inicioJornada, finJornada }.
  */
-var calcularIntervaloJornada = function (fecha_string, zona_horaria) {
-    var fecha = luxon_1.DateTime.fromJSDate(new Date(fecha_string), {
-        zone: zona_horaria,
-    });
+var calcularIntervaloJornada = function (fecha) {
     // Inicio del día actual
     var inicio_jornada = fecha.startOf("day");
     // Fin de la jornada actual (06:00 AM del día actual)

@@ -4,18 +4,10 @@ import { DateTime } from "luxon";
  * Calcula los intervalos de tiempo de una jornada.
  * Una jornada termina a las 6:00 AM del día siguiente.
  *
- * @param {string} fecha_string - Fecha en formato string.
- * @param {string} zona_horaria - Zona horaria a usar.
+ * @param {DateTime} fecha - Objeto DateTime de luxon.
  * @returns {Object} - Intervalos de tiempo { inicioJornada, finJornada }.
  */
-export const calcularIntervaloJornada = (
-  fecha_string: string,
-  zona_horaria: string
-) => {
-  const fecha = DateTime.fromJSDate(new Date(fecha_string), {
-    zone: zona_horaria,
-  });
-
+export const calcularIntervaloJornada = (fecha: DateTime) => {
   // Inicio del día actual
   let inicio_jornada = fecha.startOf("day");
 
