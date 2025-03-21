@@ -1,3 +1,4 @@
+import { DateTime } from "luxon";
 import { Models } from "./models";
 import { TipoMarcacion } from "./TipoMarcacion";
 /**
@@ -421,24 +422,24 @@ export type ResultadoTiempo = {
 };
 export type TipoAusencia = "LICENCIA_MEDICA" | "FERIADO_LEGAL" | "PERMISO_ADMINISTRATIVO" | "PERMISO_ADMINISTRATIVO_SIN_GOCE";
 export type Ausencia = {
-    id: string;
-    usuarioId: string;
-    cantidad: number;
-    fechaInicio: Date;
-    fechaFin: Date;
-    tipo: TipoAusencia;
-    motivo: string;
+    numeroDias: number;
+    fechaInicio: string;
+    fechaTermino: string;
+    numeroDecreto: number | null;
+    idReemplazante: number | null;
+    tipo: string;
 };
-export type JornadaDiaria = {
+export type AusenciaProps = Models.Document & Ausencia;
+export type DiaLaboral = {
     id_usuario: string;
     fecha: string;
     id_jornada: string | null;
     jornada: JornadaProps | null;
-    hora_entrada: string | null | undefined;
-    hora_salida: string | null | undefined;
-    inicio_colacion: string | null | undefined;
-    fin_colacion: string | null | undefined;
-    colacion_en_rango: boolean | null;
+    hora_entrada: DateTime | null | undefined;
+    hora_salida: DateTime | null | undefined;
+    inicio_colacion: DateTime | null | undefined;
+    fin_colacion: DateTime | null | undefined;
+    colacion_en_rango: boolean | null | undefined;
     horas_trabajadas: string;
     tiempo_colacion: string;
     atraso: string;
@@ -447,7 +448,24 @@ export type JornadaDiaria = {
     colacion_no_devuelta: string;
     horas_extras_25: string;
     horas_extras_50: string;
-    ausencia: string | null;
 };
-export type JornadaDiariaProps = Models.Document & JornadaDiaria;
+export type DiaLaboralProps = DiaLaboral & Models.Document;
+export type MesLaboral = {
+    id_usuario: string;
+    fecha: string;
+    horas_trabajadas: string;
+    atraso: string;
+    salida_anticipada: string;
+    horas_extras_25: string;
+    horas_extras_50: string;
+    colacion_no_devuelta: string;
+    no_marco_colacion: number;
+    agregado_por: string | null;
+    actualizado_por: string | null;
+    ausencia: {
+        fecha: string;
+        tipo: string;
+    }[];
+};
+export type MesLaboralProps = Models.Document & MesLaboral;
 export {};
