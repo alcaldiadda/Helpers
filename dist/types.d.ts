@@ -422,12 +422,14 @@ export type ResultadoTiempo = {
 };
 export type TipoAusencia = "LICENCIA_MEDICA" | "FERIADO_LEGAL" | "PERMISO_ADMINISTRATIVO" | "PERMISO_ADMINISTRATIVO_SIN_GOCE";
 export type Ausencia = {
-    numeroDias: number;
-    fechaInicio: string;
-    fechaTermino: string;
-    numeroDecreto: number | null;
-    idReemplazante: number | null;
+    id_usuario: string;
+    numero_decreto: number | null;
     tipo: string;
+    id_reemplazante: number | null;
+    fecha_inicio: string;
+    fecha_termino: string;
+    agregado_por: string;
+    actualizado_por: string;
 };
 export type AusenciaProps = Models.Document & Ausencia;
 export type DiaLaboral = {
