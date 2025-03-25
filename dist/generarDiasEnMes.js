@@ -22,13 +22,13 @@ var generarDiasEnMes = function (anio, mes, incluirFinSemana) {
         day: 1,
     });
     var ultimoDia = primerDiaDelMes.endOf("month").day;
-    return Array.from({ length: ultimoDia }, function (_, i) {
-        var fecha = luxon_1.DateTime.fromObject({ year: anio, month: mes, day: i + 1 });
-        // Excluir sábados (6) y domingos (7) si incluirFinSemana es false
-        if (!incluirFinSemana && (fecha.weekday === 6 || fecha.weekday === 7)) {
-            return null;
-        }
-        return fecha;
-    }).filter(Boolean); // Filtra días nulos
+    var dias = [];
+    for (var dia = 1; dia <= ultimoDia; dia++) {
+        var fecha = luxon_1.DateTime.fromObject({ year: anio, month: mes, day: dia });
+        if (!incluirFinSemana && (fecha.weekday === 6 || fecha.weekday === 7))
+            continue;
+        dias.push(fecha);
+    }
+    return dias;
 };
 exports.generarDiasEnMes = generarDiasEnMes;

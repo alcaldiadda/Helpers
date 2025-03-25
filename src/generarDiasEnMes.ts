@@ -16,21 +16,21 @@ export const generarDiasEnMes = (
   anio: number,
   mes: number,
   incluirFinSemana = false
-) => {
+): DateTime[] => {
   const primerDiaDelMes = DateTime.fromObject({
     year: anio,
     month: mes,
     day: 1,
   });
   const ultimoDia = primerDiaDelMes.endOf("month").day;
+  const dias: DateTime[] = [];
 
-  return Array.from({ length: ultimoDia }, (_, i) => {
-    const fecha = DateTime.fromObject({ year: anio, month: mes, day: i + 1 });
+  for (let dia = 1; dia <= ultimoDia; dia++) {
+    const fecha = DateTime.fromObject({ year: anio, month: mes, day: dia });
+    if (!incluirFinSemana && (fecha.weekday === 6 || fecha.weekday === 7))
+      continue;
+    dias.push(fecha);
+  }
 
-    // Excluir sábados (6) y domingos (7) si incluirFinSemana es false
-    if (!incluirFinSemana && (fecha.weekday === 6 || fecha.weekday === 7)) {
-      return null;
-    }
-    return fecha;
-  }).filter(Boolean); // Filtra días nulos
+  return dias;
 };

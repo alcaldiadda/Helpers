@@ -11,4 +11,4 @@ import { DateTime } from "luxon";
  * const diasEnero = generarDiasEnMes(2024, 1, true); // Incluye fines de semana
  * const diasLaboralesEnero = generarDiasEnMes(2024, 1); // Excluye sábados y domingos
  */
-export declare const generarDiasEnMes: (anio: number, mes: number, incluirFinSemana?: boolean) => (DateTime | null)[];
+export declare const generarDiasEnMes: (anio: number, mes: number, incluirFinSemana?: boolean) => DateTime[];
