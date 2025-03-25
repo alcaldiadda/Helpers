@@ -43,6 +43,7 @@ __exportStar(require("./getSchedules"), exports);
 __exportStar(require("./groupItems"), exports);
 __exportStar(require("./getFirstWord"), exports);
 __exportStar(require("./Identification"), exports);
+__exportStar(require("./generarDiasEnMes"), exports);
 __exportStar(require("./isArrayEqual"), exports);
 __exportStar(require("./isDateLessThanOrEqualToday"), exports);
 __exportStar(require("./isInTime"), exports);
