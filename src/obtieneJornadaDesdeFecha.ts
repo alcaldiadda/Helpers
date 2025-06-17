@@ -1,5 +1,5 @@
+import { Asistencia, JornadaTipo } from "centro-de-datos";
 import { obtenerDiaSemana } from "./obtenerDiaSemana";
-import { JornadaProps, MarcacionBruta } from "./types";
 
 /**
  * Obtiene el horario aplicable según la jerarquía:
@@ -12,23 +12,23 @@ import { JornadaProps, MarcacionBruta } from "./types";
  * @returns La jornada de trabajo
  */
 export const obtieneJornadaDesdeFecha = (
-  marcacion: MarcacionBruta,
-  jornadas: JornadaProps[]
+  marcacion: Asistencia.MarcacionBruta,
+  jornadas: Asistencia.JornadaProps[]
 ) => {
   const diaSemana = obtenerDiaSemana(marcacion.fecha).toLowerCase();
   return jornadas.find((jornada) => {
     if (
-      jornada.tipo === "usuario" &&
+      jornada.tipo === JornadaTipo.USUARIO &&
       jornada.id_usuario === marcacion.id_usuario
     ) {
       return (
         jornada.fecha === marcacion.fecha || jornada.dia_semana === diaSemana
       );
     }
-    if (jornada.tipo === "especial") {
+    if (jornada.tipo === JornadaTipo.ESPECIAL) {
       return jornada.fecha === marcacion.fecha;
     }
-    if (jornada.tipo === "regular") {
+    if (jornada.tipo === JornadaTipo.REGULAR) {
       return jornada.dia_semana === diaSemana;
     }
     return false;

@@ -1,4 +1,4 @@
-import { JornadaProps, MarcacionBruta } from "./types";
+import { Asistencia } from "centro-de-datos";
 /**
  * Obtiene el horario aplicable según la jerarquía:
  * 1. Jornada por usuario para fecha específica
@@ -9,4 +9,4 @@ import { JornadaProps, MarcacionBruta } from "./types";
  * @param jornadas - Las jornadas de trabajo
  * @returns La jornada de trabajo
  */
-export declare const obtieneJornadaDesdeFecha: (marcacion: MarcacionBruta, jornadas: JornadaProps[]) => JornadaProps | undefined;
+export declare const obtieneJornadaDesdeFecha: (marcacion: Asistencia.MarcacionBruta, jornadas: Asistencia.JornadaProps[]) => Asistencia.JornadaProps | undefined;

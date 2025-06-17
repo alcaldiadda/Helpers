@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.obtieneJornadaDesdeFecha = void 0;
+var centro_de_datos_1 = require("centro-de-datos");
 var obtenerDiaSemana_1 = require("./obtenerDiaSemana");
 /**
  * Obtiene el horario aplicable según la jerarquía:
@@ -15,14 +16,14 @@ var obtenerDiaSemana_1 = require("./obtenerDiaSemana");
 var obtieneJornadaDesdeFecha = function (marcacion, jornadas) {
     var diaSemana = (0, obtenerDiaSemana_1.obtenerDiaSemana)(marcacion.fecha).toLowerCase();
     return jornadas.find(function (jornada) {
-        if (jornada.tipo === "usuario" &&
+        if (jornada.tipo === centro_de_datos_1.JornadaTipo.USUARIO &&
             jornada.id_usuario === marcacion.id_usuario) {
             return (jornada.fecha === marcacion.fecha || jornada.dia_semana === diaSemana);
         }
-        if (jornada.tipo === "especial") {
+        if (jornada.tipo === centro_de_datos_1.JornadaTipo.ESPECIAL) {
             return jornada.fecha === marcacion.fecha;
         }
-        if (jornada.tipo === "regular") {
+        if (jornada.tipo === centro_de_datos_1.JornadaTipo.REGULAR) {
             return jornada.dia_semana === diaSemana;
         }
         return false;
