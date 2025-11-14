@@ -5,14 +5,14 @@ export class Identification {
     this.id = rut;
   }
 
-  isValid() {
+  isValid(incluyeZero?: boolean) {
     if (typeof this.id !== "string") {
       return false;
     }
 
-    // if it starts with 0 we return false
-    // so a rut like 00000000-0 will not pass
-    if (/^0+/.test(this.id)) {
+    // si comienza con 0 retornamos false
+    // un run como 00000000-0 no pasará
+    if (/^0+/.test(this.id) && !incluyeZero) {
       return false;
     }
 
@@ -41,12 +41,14 @@ export class Identification {
     let result;
 
     if (options.dots) {
-      result = this.id.slice(-4, -1) + "-" + this.id.substring(this.id.length - 1);
+      result =
+        this.id.slice(-4, -1) + "-" + this.id.substring(this.id.length - 1);
       for (let i = 4; i < this.id.length; i += 3) {
         result = this.id.slice(-3 - i, -i) + "." + result;
       }
     } else {
-      result = this.id.slice(0, -1) + "-" + this.id.substring(this.id.length - 1);
+      result =
+        this.id.slice(0, -1) + "-" + this.id.substring(this.id.length - 1);
     }
 
     return result;
@@ -64,7 +66,11 @@ export class Identification {
     const initialValue = 0;
     const sumResult = rut
       .reverse()
-      .reduce((accumulator, currentValue, index) => accumulator + currentValue * ((index % 6) + 2), initialValue);
+      .reduce(
+        (accumulator, currentValue, index) =>
+          accumulator + currentValue * ((index % 6) + 2),
+        initialValue
+      );
 
     const checkDigit = modulus - (sumResult % modulus);
 

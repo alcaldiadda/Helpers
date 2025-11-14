@@ -5,13 +5,13 @@ var Identification = /** @class */ (function () {
     function Identification(rut) {
         this.id = rut;
     }
-    Identification.prototype.isValid = function () {
+    Identification.prototype.isValid = function (incluyeZero) {
         if (typeof this.id !== "string") {
             return false;
         }
-        // if it starts with 0 we return false
-        // so a rut like 00000000-0 will not pass
-        if (/^0+/.test(this.id)) {
+        // si comienza con 0 retornamos false
+        // un run como 00000000-0 no pasará
+        if (/^0+/.test(this.id) && !incluyeZero) {
             return false;
         }
         if (!/^0*(\d{1,3}(\.?\d{3})*)-?([\dkK])$/.test(this.id)) {
@@ -33,13 +33,15 @@ var Identification = /** @class */ (function () {
         this.clean();
         var result;
         if (options.dots) {
-            result = this.id.slice(-4, -1) + "-" + this.id.substring(this.id.length - 1);
+            result =
+                this.id.slice(-4, -1) + "-" + this.id.substring(this.id.length - 1);
             for (var i = 4; i < this.id.length; i += 3) {
                 result = this.id.slice(-3 - i, -i) + "." + result;
             }
         }
         else {
-            result = this.id.slice(0, -1) + "-" + this.id.substring(this.id.length - 1);
+            result =
+                this.id.slice(0, -1) + "-" + this.id.substring(this.id.length - 1);
         }
         return result;
     };
@@ -53,7 +55,9 @@ var Identification = /** @class */ (function () {
         var initialValue = 0;
         var sumResult = rut
             .reverse()
-            .reduce(function (accumulator, currentValue, index) { return accumulator + currentValue * ((index % 6) + 2); }, initialValue);
+            .reduce(function (accumulator, currentValue, index) {
+            return accumulator + currentValue * ((index % 6) + 2);
+        }, initialValue);
         var checkDigit = modulus - (sumResult % modulus);
         if (checkDigit === 10) {
             return "K";
