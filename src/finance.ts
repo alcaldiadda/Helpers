@@ -54,6 +54,10 @@ export const documentAttachmentTypes = [
     value: "CERTIFICADO_ESTUDIOS",
     label: "Certificado de Estudios",
   },
+  {
+    value: "SOLICITUD_ANULACION",
+    label: "Solicitud de Anulación",
+  },
 ];
 
 export const purchaseType = [
