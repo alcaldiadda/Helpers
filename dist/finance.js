@@ -55,6 +55,10 @@ exports.documentAttachmentTypes = [
         value: "CERTIFICADO_ESTUDIOS",
         label: "Certificado de Estudios",
     },
+    {
+        value: "SOLICITUD_ANULACION",
+        label: "Solicitud de Anulación",
+    },
 ];
 exports.purchaseType = [
     { value: "COMPRA_AGIL", label: "Compra Ágil" },
