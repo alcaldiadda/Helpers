@@ -5,14 +5,14 @@ export class Identification {
     this.id = rut;
   }
 
-  isValid(incluyeZero?: boolean) {
+  isValid(incluyeCero?: boolean) {
     if (typeof this.id !== "string") {
       return false;
     }
 
     // si comienza con 0 retornamos false
     // un run como 00000000-0 no pasará
-    if (/^0+/.test(this.id) && !incluyeZero) {
+    if (/^0+/.test(this.id) && !incluyeCero) {
       return false;
     }
 

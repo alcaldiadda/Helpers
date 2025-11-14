@@ -1,7 +1,7 @@
 export declare class Identification {
     private id;
     constructor(rut: string);
-    isValid(incluyeZero?: boolean): boolean;
+    isValid(incluyeCero?: boolean): boolean;
     format(options?: {
         dots: boolean;
     }): string;

@@ -5,13 +5,13 @@ var Identification = /** @class */ (function () {
     function Identification(rut) {
         this.id = rut;
     }
-    Identification.prototype.isValid = function (incluyeZero) {
+    Identification.prototype.isValid = function (incluyeCero) {
         if (typeof this.id !== "string") {
             return false;
         }
         // si comienza con 0 retornamos false
         // un run como 00000000-0 no pasará
-        if (/^0+/.test(this.id) && !incluyeZero) {
+        if (/^0+/.test(this.id) && !incluyeCero) {
             return false;
         }
         if (!/^0*(\d{1,3}(\.?\d{3})*)-?([\dkK])$/.test(this.id)) {
