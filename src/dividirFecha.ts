@@ -7,7 +7,7 @@ import { DateTime } from "luxon";
  */
 export const dividirFecha = (fecha: DateTime) => {
   // Construir la fecha en formato YYYY-MM-DD
-  const mes = String(fecha.month + 1).padStart(2, "0");
+  const mes = String(fecha.month).padStart(2, "0");
   const dia = String(fecha.day).padStart(2, "0");
   const fechaFormateada = `${fecha.year}-${mes}-${dia}`;
 
