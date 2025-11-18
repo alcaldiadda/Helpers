@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.restarTiempo = void 0;
+exports.restarTiempo = restarTiempo;
 var luxon_1 = require("luxon");
 /**
  * Le resta tiempo a un objeto que contiene horas y minutos
@@ -19,4 +19,3 @@ function restarTiempo(tiempo1, tiempo2) {
         minutos: Math.max(0, Math.floor(duration.minutes)),
     };
 }
-exports.restarTiempo = restarTiempo;

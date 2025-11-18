@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.agregarTiempo = void 0;
+exports.agregarTiempo = agregarTiempo;
 var luxon_1 = require("luxon");
 /**
  * Le agrega tiempo a un objeto que contiene horas y minutos
@@ -19,4 +19,3 @@ function agregarTiempo(tiempo1, tiempo2) {
         minutos: Math.floor(duracion.minutes),
     };
 }
-exports.agregarTiempo = agregarTiempo;

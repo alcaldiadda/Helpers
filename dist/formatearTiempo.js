@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.formatearTiempo = void 0;
+exports.formatearTiempo = formatearTiempo;
 /**
  * Devuelve la hora y los minutos de un objeto DateTime
  * @param fecha objeto DateTime a formatear
@@ -9,4 +9,3 @@ exports.formatearTiempo = void 0;
 function formatearTiempo(fecha) {
     return fecha.toFormat("HH:mm");
 }
-exports.formatearTiempo = formatearTiempo;

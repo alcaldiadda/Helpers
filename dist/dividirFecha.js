@@ -8,7 +8,7 @@ exports.dividirFecha = void 0;
  */
 var dividirFecha = function (fecha) {
     // Construir la fecha en formato YYYY-MM-DD
-    var mes = String(fecha.month + 1).padStart(2, "0");
+    var mes = String(fecha.month).padStart(2, "0");
     var dia = String(fecha.day).padStart(2, "0");
     var fechaFormateada = "".concat(fecha.year, "-").concat(mes, "-").concat(dia);
     // Construir la hora en formato HH:mm

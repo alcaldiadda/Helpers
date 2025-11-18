@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.parsearHora = void 0;
+exports.parsearHora = parsearHora;
 var luxon_1 = require("luxon");
 /**
  * Parsea la hora en formato string y devuelve un objeto DateTime
@@ -10,4 +10,3 @@ var luxon_1 = require("luxon");
 function parsearHora(tiempoString, zonaHoraria) {
     return luxon_1.DateTime.fromFormat(tiempoString, "HH:mm", { zone: zonaHoraria });
 }
-exports.parsearHora = parsearHora;

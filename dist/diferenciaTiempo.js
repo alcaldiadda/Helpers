@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.diferenciaTiempo = void 0;
+exports.diferenciaTiempo = diferenciaTiempo;
 /**
  * Calcula la diferencia en horas y minutos entre dos objetos DateTime
  * @param inicio fecha de inicio
@@ -14,4 +14,3 @@ function diferenciaTiempo(inicio, fin) {
         minutos: Math.floor(diff.minutes || 0),
     };
 }
-exports.diferenciaTiempo = diferenciaTiempo;
