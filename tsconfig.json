@@ -15,6 +15,7 @@
     "paths": {
       "helper/*": ["./src/*"]
     },
+    "types": ["bun"],
     "outDir": "./dist",
     "declaration": true
   },
