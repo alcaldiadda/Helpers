@@ -7,6 +7,6 @@ import { DateTime } from "luxon";
  * @returns {Object} - Intervalos de tiempo { inicioJornada, finJornada }.
  */
 export declare const calcularIntervaloJornada: (fecha: DateTime) => {
-    inicio_jornada: DateTime<boolean>;
-    fin_jornada: DateTime<boolean>;
+    inicio_jornada: DateTime;
+    fin_jornada: DateTime;
 };

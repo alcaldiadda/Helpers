@@ -35,6 +35,7 @@ __exportStar(require("./esFeriado"), exports);
 __exportStar(require("./esPrimeraMarcacionJornada"), exports);
 __exportStar(require("./extractError"), exports);
 __exportStar(require("./finance"), exports);
+__exportStar(require("./generaIdDeterministico"), exports);
 __exportStar(require("./formatearTiempo"), exports);
 __exportStar(require("./getCookie"), exports);
 __exportStar(require("./getInitials"), exports);

@@ -19,6 +19,7 @@ export * from "./esFeriado";
 export * from "./esPrimeraMarcacionJornada";
 export * from "./extractError";
 export * from "./finance";
+export * from "./generaIdDeterministico";
 export * from "./formatearTiempo";
 export * from "./getCookie";
 export * from "./getInitials";
