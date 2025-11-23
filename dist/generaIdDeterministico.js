@@ -48,12 +48,22 @@ exports.generarIdDeterministico = void 0;
  * @returns ID determinístico en base36 con la longitud indicada.
  */
 var generarIdDeterministico = function (props) { return __awaiter(void 0, void 0, void 0, function () {
-    var input, encoder, data, hashBuffer, hashHex, hashBase36;
+    var text, input, encoder, data, hashBuffer, hashHex, hashBase36;
     var _a;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
-                input = "".concat(props.prefijo, "-").concat(props.id_identidad, "-").concat(props.fecha);
+                if (props.id_identidad && props.fecha) {
+                    throw new Error("FECHA_Y_ID_VACIOS");
+                }
+                text = [props.prefijo];
+                if (props.id_identidad) {
+                    text.push(props.id_identidad);
+                }
+                if (props.fecha) {
+                    text.push(props.fecha);
+                }
+                input = text.join("-");
                 encoder = new TextEncoder();
                 data = encoder.encode(input);
                 return [4 /*yield*/, crypto.subtle.digest("SHA-256", data)];

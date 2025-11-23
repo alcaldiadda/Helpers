@@ -10,11 +10,25 @@
  */
 export const generarIdDeterministico = async (props: {
   prefijo: string;
-  id_identidad: string;
-  fecha: string;
+  id_identidad?: string;
+  fecha?: string;
   longitud?: number;
 }): Promise<string> => {
-  const input = `${props.prefijo}-${props.id_identidad}-${props.fecha}`;
+  if (props.id_identidad && props.fecha) {
+    throw new Error("FECHA_Y_ID_VACIOS");
+  }
+
+  const text = [props.prefijo];
+
+  if (props.id_identidad) {
+    text.push(props.id_identidad);
+  }
+
+  if (props.fecha) {
+    text.push(props.fecha);
+  }
+
+  const input = text.join("-");
 
   const encoder = new TextEncoder();
   const data = encoder.encode(input);

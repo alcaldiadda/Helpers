@@ -10,7 +10,7 @@
  */
 export declare const generarIdDeterministico: (props: {
     prefijo: string;
-    id_identidad: string;
-    fecha: string;
+    id_identidad?: string;
+    fecha?: string;
     longitud?: number;
 }) => Promise<string>;
