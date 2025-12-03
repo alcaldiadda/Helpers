@@ -14,7 +14,7 @@ export const generarIdDeterministico = async (props: {
   fecha?: string;
   longitud?: number;
 }): Promise<string> => {
-  if (props.id_identidad && props.fecha) {
+  if (!props.id_identidad && !props.fecha) {
     throw new Error("FECHA_Y_ID_VACIOS");
   }
 

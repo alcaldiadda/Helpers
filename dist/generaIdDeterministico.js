@@ -53,7 +53,7 @@ var generarIdDeterministico = function (props) { return __awaiter(void 0, void 0
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0:
-                if (props.id_identidad && props.fecha) {
+                if (!props.id_identidad && !props.fecha) {
                     throw new Error("FECHA_Y_ID_VACIOS");
                 }
                 text = [props.prefijo];
