@@ -4,4 +4,4 @@ import { DateTime } from "luxon";
  * @param tiempoString
  * @returns Objeto DateTime
  */
-export declare function parsearHora(tiempoString: string, zonaHoraria?: string): DateTime;
+export declare function parsearHora(tiempoString: string, zonaHoraria?: string, formato?: string): DateTime;

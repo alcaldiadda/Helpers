@@ -7,7 +7,12 @@ import { DateTime } from "luxon";
  */
 export function parsearHora(
   tiempoString: string,
-  zonaHoraria?: string
+  zonaHoraria?: string,
+  formato?: string
 ): DateTime {
-  return DateTime.fromFormat(tiempoString, "HH:mm", { zone: zonaHoraria });
+  const formato_automatico =
+    tiempoString.split(":").length === 3 ? "HH:mm:ss" : "HH:mm";
+  return DateTime.fromFormat(tiempoString, formato || formato_automatico, {
+    zone: zonaHoraria,
+  });
 }
