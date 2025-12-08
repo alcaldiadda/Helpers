@@ -17,7 +17,7 @@ var obtieneJornadaDesdeFecha = function (marcacion, jornadas) {
     var diaSemana = (0, obtenerDiaSemana_1.obtenerDiaSemana)(marcacion.fecha).toLowerCase();
     return jornadas.find(function (jornada) {
         if (jornada.tipo === centro_de_datos_1.JornadaTipo.USUARIO &&
-            jornada.id_usuario === marcacion.id_usuario) {
+            jornada.id_identidad === marcacion.id_identidad) {
             return (jornada.fecha === marcacion.fecha || jornada.dia_semana === diaSemana);
         }
         if (jornada.tipo === centro_de_datos_1.JornadaTipo.ESPECIAL) {

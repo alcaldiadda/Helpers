@@ -19,7 +19,7 @@ export const obtieneJornadaDesdeFecha = (
   return jornadas.find((jornada) => {
     if (
       jornada.tipo === JornadaTipo.USUARIO &&
-      jornada.id_usuario === marcacion.id_usuario
+      jornada.id_identidad === marcacion.id_identidad
     ) {
       return (
         jornada.fecha === marcacion.fecha || jornada.dia_semana === diaSemana
