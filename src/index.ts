@@ -57,5 +57,6 @@ export * from "./subtractTimeObject";
 export * from "./summarizeHoursMinutes";
 export * from "./summarizeKeyValues";
 export * from "./time";
+export * from "./Tiempo";
 export * from "./TipoMarcacion";
 export * from "./types";

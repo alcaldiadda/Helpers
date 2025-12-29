@@ -73,5 +73,6 @@ __exportStar(require("./subtractTimeObject"), exports);
 __exportStar(require("./summarizeHoursMinutes"), exports);
 __exportStar(require("./summarizeKeyValues"), exports);
 __exportStar(require("./time"), exports);
+__exportStar(require("./Tiempo"), exports);
 __exportStar(require("./TipoMarcacion"), exports);
 __exportStar(require("./types"), exports);
